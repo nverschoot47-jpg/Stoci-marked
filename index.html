@@ -3691,6 +3691,1194 @@ setTimeout(()=>{
  document.querySelector(".logo span").textContent="CONTROL ROOM · v25 · 20 AUGUST";
 },2700);
 
+/* ═══════════ v26 — WHY THE PORTFOLIO WENT UP ═══════════ */
+
+const WHYUP = {
+ h:"MP Materials did it — up roughly 58% in three weeks, and it is now approaching the one level this dashboard told you to respect",
+ lead:`Your other three positions did not do this. BigBear.ai is trading around $3.04–3.12 against the $3.2973 in your last snapshot, so it is <b>slightly down</b>. The move is MP, and it is large.`,
+ path:[
+  ["29 July","~$38","the low"],
+  ["4 August","$47.49","the level in the source document"],
+  ["12 August","$54.17","your last recorded price"],
+  ["17 August","$54.56","+6.76% that session, +23.5% over the week"],
+  ["21 August","~$60.05","+9.19% on the day"]
+ ],
+ total:"From roughly $38 on 29 July to about $60.05 — that is <b>+58% in three weeks</b>, and +10.9% since your own last snapshot."
+};
+
+const WHYMP = [
+{t:"Government money, confirmed",c:"pos",
+ b:"On 7 August it was reported that the US government will invest <b>$3 billion in critical minerals</b>. That sits on top of the existing arrangement: a defence department stake, a loan, and a ten-year price guarantee. Coverage this week framed the rally as Pentagon price support anchoring rare-earth earnings."},
+{t:"The quarter delivered on the one number",c:"pos",
+ b:"Q2 revenue of <b>$108.5m against a $95.95m consensus</b>, up 89%. Adjusted EBITDA $28.5m. Guidance for the third quarter is above 1,000 metric tons of the key oxide, with realised pricing in the high $90s per kilogram, and first commercial magnet shipments to a major carmaker in the fourth quarter."},
+{t:"The sector moved together",c:"gold",
+ b:"On the big up days the whole group rallied — USA Rare Earth around +8.5%, NioCorp around +3%. <b>And this is the part worth reading carefully:</b> one report noted plainly that on the biggest single day, <i>no rare-earth specific news was confirmed</i>. Traders were positioning for further tariff and industrial-policy support. The article itself called that framing speculative."},
+{t:"Short covering is part of it",c:"gold",
+ b:"Short interest stands at <b>26.8 million shares, about 18.7% of the float</b>, down 7.1% from the previous period. A fifth of the free float being short means a rally forces buying that has nothing to do with the business."},
+{t:"Wall Street repositioned",c:"inf",
+ b:"Of 18 analysts, 13 rate it Strong Buy and five Buy, with a mean target of <b>$75.38</b>. Bear in mind the source class: a target is an opinion, not a transaction. This is the weakest evidence on this page."}
+];
+
+const MPWARN = {
+ t:"Now read your own rule back",
+ b:`The MP card in this dashboard has carried one instruction since the first version: <b>"DO NOT ADD above $64 — there is a named seller there with about 12 million shares who has never once bought."</b><br><br>
+ The chief executive sold roughly 1.19 million shares between December and June, entirely in the <b>$63–72 band</b>. Nineteen sales, zero purchases, over five years. His last filing was 3 June, and his trading window <b>reopened</b> after the 6 August results.<br><br>
+ At around $60.05 the price is now roughly <b>6.5% below</b> where he has consistently sold. In three weeks it has closed a gap that was 35% wide.`,
+ what:`This is not a prediction that he sells. It is the observation that a documented, repeated behaviour has a price attached, and the price is now close to it. <b>If a filing appears in the next few weeks, it will not be a surprise — it will be the thing the dashboard said to expect.</b>`,
+ note:`Also worth holding: MP still posted a <b>$20.3m net loss</b> for the quarter, and even after this rally the shares sit nearly 40% below their 52-week peak. The rally is real; the profitability question is not resolved by it.`
+};
+
+const MPSIZE = {
+ t:"What it does to your weights",
+ b:`Your positions have not been re-exported, so this is derived from the price moves rather than measured. But the direction is clear.<br><br>
+ MP was <b>27.4%</b> of your shares at $54.17. At around $60 it is roughly <b>30%</b>, while BigBear.ai has drifted slightly lower. <b>Your position sizes have shifted without you doing anything.</b><br><br>
+ That is exactly the situation the trim rule was written for: a position grows because it worked, not because you decided it should be larger.`,
+ q:["Do you want 30% in MP, or did it simply become 30%?",
+    "Your rule says do not add above $64. It says nothing about trimming into it — that is a decision you have not yet made.",
+    "If the chief executive files a sale in September, do you already know what you will do? Deciding after the filing is deciding under pressure."]
+};
+
+const OTHER3 = [
+ ["BBAI","~$3.04–3.12","vs $3.2973","−6 to −8%","Slightly lower. Market value around $1.46bn. The Q2 numbers were solid — revenue $36.7m up 13%, gross margin from 25.0% to 32.8%, net loss narrowed sharply to $25.7m, backlog up 9% to $269.6m — but the share programme of up to 100 million shares still caps every rally.","neg"],
+ ["3CP","not verified","—","—","No reliable quote retrieved this session. It reports on 26 August in the same session as NVIDIA, which remains the decision you need to make before 25 August closes.","mu"],
+ ["VCIG","not verified","—","—","At around €10 of remaining value, movement here is not information.","mu"]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>WHY YOUR PORTFOLIO WENT UP</b> · CHECKED 21 AUGUST</div>
+ <div class="card hl" style="margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${WHYUP.h}</div>
+   <div class="mono mu" style="font-size:9px;text-align:right">VERIFIED${SB('ct','LIVE')}</div></div>
+  <div class="lede" style="margin-bottom:10px">${WHYUP.lead}</div>
+  <div class="tw"><table><thead><tr><th>Date</th><th class="n">MP price</th><th>What it was</th></tr></thead><tbody>
+  ${WHYUP.path.map(p=>`<tr><td class="mono gold"><b>${p[0]}</b></td><td class="n mono">${p[1]}</td><td class="tx2">${p[2]}</td></tr>`).join("")}
+  </tbody></table></div>
+  <div class="blk p"><div class="h">The total move</div>${WHYUP.total}</div>
+ </div>
+
+ <div class="sh"><b>WHAT DROVE IT</b> · five reasons, in order of how solid the evidence is</div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${WHYMP.map(m=>`<div class="blk ${m.c=='pos'?'p':m.c=='gold'?'g':'i'}"><div class="h">${m.t}</div>${m.b}${SB(m.c=='inf'?'an':'ct')}</div>`).join("")}
+ </div>
+
+ <div class="card" style="border-color:#c9a0a0;margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:14px">${MPWARN.t}</div>
+   <span class="tag st neg">6.5% BELOW THE SELLER'S BAND</span></div>
+  <div class="blk n">${MPWARN.b}${SB('f4')}</div>
+  <div class="blk g"><div class="h">What that means, precisely</div>${MPWARN.what}</div>
+  <div class="blk i"><div class="h">And the part the rally does not fix</div>${MPWARN.note}</div>
+ </div>
+
+ <div class="card" style="margin-bottom:14px">
+  <div class="ctl" style="font-size:13px;margin-bottom:6px">${MPSIZE.t}</div>
+  <div class="blk g">${MPSIZE.b}</div>
+  <div class="blk n"><div class="h">Three questions worth answering before Monday</div>${MPSIZE.q.map(x=>"· "+x).join("<br>")}</div>
+ </div>
+
+ <div class="sh"><b>THE OTHER THREE</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th class="n">Now</th><th class="n">Last snapshot</th><th class="n">Change</th><th style="min-width:520px">Reading</th></tr></thead><tbody>
+ ${OTHER3.map(o=>`<tr class="wrap"><td><b>${o[0]}</b></td><td class="n mono">${o[1]}</td>
+  <td class="n mono tx2">${o[2]}</td><td class="n mono ${o[5]=='neg'?'neg':'mu'}">${o[3]}</td><td>${o[4]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">The honest summary</div>
+ One position did all the work, and it did it partly on government support that is real and partly on positioning for policy that has not been announced — on the biggest day, <b>no rare-earth-specific news was confirmed at all</b>.<br><br>
+ That combination is worth enjoying and worth respecting. A move driven by anticipation reverses when the anticipation is disappointed, and the one seller with a documented price band is now within reach of it.<br><br>
+ <b>The most useful thing you can do this weekend is decide, in writing, what you do if a filing appears.</b> Not because it will — because deciding afterwards is deciding under pressure.</div>
+
+ <div class="warn"><div class="h">What I could not verify</div>
+ No broker export, so the weights above are derived from price moves rather than measured. No reliable quote for Xiaomi or VCI Global this session. If you export the account, the attribution becomes exact rather than inferred — and given a 58% move in one position, that is worth doing before Monday.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["MP MATERIALS","~$60 · +58% in three weeks","fresh"],
+  ["WATCH","seller's band starts $64","stale"],
+  ["NEXT DECISION","25 Aug · Xiaomi weight","stale"],
+  ["VERSION","26.0 · 21 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v26 · 21 AUGUST";
+},2900);
+
+/* ═══════════ v27 — LEADERSHIP TAB ═══════════ */
+
+const LREAD = [
+{t:"Planned versus abrupt",c:"g",
+ b:"A succession announced months ahead with a named successor is routine. A departure <b>effective the same day</b>, with an interim appointment, is not — it means the board did not have a plan, which usually means it did not have time to make one."},
+{t:"Interim is the single loudest word",c:"n",
+ b:"When a company names an <b>interim</b> chief executive or finance chief, read it as: this was not scheduled. Fortune Brands announced its chief executive's departure on 16 March with an interim replacement the same day — and its finance chief stepped down on the same date, also replaced on an interim basis."},
+{t:"The finance chief leaving is worse than the chief executive leaving",c:"n",
+ b:"A chief executive can leave for a hundred reasons. A finance chief has signed the accounts. When both go within days of each other, that is the pattern to fear: at Fermi the board <b>removed</b> the chief executive on 17 April, and the finance chief resigned two days later on the 19th."},
+{t:"\"No disagreement with the company\"",c:"i",
+ b:"Standard legal language in the filing, confirming no dispute over accounting, policies or practices. Its presence is routine — <b>its absence is worth noticing.</b> Vestis used it explicitly for both its finance chief and its chief executive departures."},
+{t:"The chairman stepping into the job",c:"g",
+ b:"Usually a reset rather than a promotion. Integra LifeSciences appointed its board chairman as president and chief executive from 1 May 2026, succeeding a leader who left to pursue other opportunities — and the shares rose sharply, which tells you what investors thought of the previous execution."},
+{t:"Revolving doors",c:"n",
+ b:"Count the changes over three years, not one. Wendy's returned to the chief executive market for the third time in three years. One company tracked this year had <b>two chief executives and two finance chiefs in three years</b> — which one analysis described bluntly as triage rather than succession planning."},
+{t:"Paid leave and investigations",c:"n",
+ b:"The most serious category. Fortrea installed an 82-year-old interim finance chief while the incumbent sat on <b>paid leave</b>. When someone is on leave rather than departed, something is being investigated."},
+{t:"Retirement after a strong run lands differently",c:"p",
+ b:"Lumentum set its executive's October retirement after shares rose 531% against 15% for the index. A planned exit from a position of strength is the least alarming version of this event — even when other directors have also left."}
+];
+
+const MINE = [
+{tk:"MP",co:"MP Materials",r:[
+ ["Chief Executive","James Litinsky","Founder, 2017. No change.","Also the seller in the $63–72 band: 19 sales, 0 purchases in five years, last filing 3 June. His trading window reopened after the 6 August results.","neg"],
+ ["Co-founder","Michael Rosenthal","No change.","—","mu"]]},
+{tk:"BBAI",co:"BigBear.ai",r:[
+ ["Chief Executive","Kevin McAleenan","No change.","Former acting head of US Homeland Security — the government-relationships hire, consistent with the defence and border policy exposure.","mu"],
+ ["Chief Financial Officer","Sean Ricker","No change.","Sold 10,000 shares at $4.33 on 22 May. The only C-suite transaction in your holdings this year that was a discretionary sale.","neg"],
+ ["Board addition","Retired US Army Lieutenant General","Appointed 2026.","A retired three-star general joining the board is a signal about where the company expects revenue to come from. Verify the full name and date in the filing.","gold"]]},
+{tk:"3CP",co:"Xiaomi",r:[
+ ["Chief Executive","Lei Jun","Founder. No change.","Hong Kong disclosure regime — far less visibility into executive share dealing than a US listing gives you.","mu"]]},
+{tk:"VCIG",co:"VCI Global",r:[
+ ["All roles","—","Not verified.","Annual report more than six months overdue. <b>Where filings are late, leadership information is unreliable by definition.</b>","neg"]]}
+];
+
+const SOLDCO = [
+{tk:"GSHD",co:"Goosehead Insurance",e:"<b>Chief executive transition scheduled for January 2027</b>, with the incoming leader presenting multi-year targets at the 13 November investor day. This was already in your calendar — a planned, dated, named succession, which is the least risky form.",c:"pos"},
+{tk:"SOFI",co:"SoFi Technologies",e:"Anthony Noto remains chief executive and was part of the five-insider buying cluster. An executive vice president sold twice under a plan adopted a year earlier — scheduled, therefore no signal.",c:"pos"},
+{tk:"TWFG",co:"TWFG",e:"Richard F. Bunch III remains chief executive and Katherine C. Nolan chief operating officer. Both had shares withheld for tax on the same day in July — a vesting date, not an event. The chief executive holds over 680,000 shares.",c:"pos"},
+{tk:"MKTW",co:"MarketWise",e:"Frank Porter Stansberry, founder of the flagship brand, sits on the board and bought 10,000 shares at $17.88 in May. Founder-directors buying is a stronger signal than professional managers buying.",c:"pos"},
+{tk:"AGS",co:"Ageas",e:"EU disclosure regime. No change identified.",c:"mu"},
+{tk:"PAX",co:"Patria Investments",e:"No change identified.",c:"mu"}]
+;
+
+const MAJOR = [
+{d:"1 Sep 2026",co:"Apple",tk:"AAPL",who:"Tim Cook → John Ternus",role:"Chief Executive",
+ why:"Cook steps down after 15 years and becomes executive chairman. Ternus is the long-time hardware engineering head.",
+ n:"Announced without prior comment on succession plans, which surprised the market. Ternus inherits the task of proving Apple can reduce reliance on the iPhone and compete in AI. <b>The largest single leadership change of 2026.</b>",c:"gold"},
+{d:"2026",co:"Berkshire Hathaway",tk:"BRK",who:"Warren Buffett → Greg Abel",role:"Chief Executive",
+ why:"Long-planned succession.",n:"The most telegraphed handover in market history, which is why it landed quietly.",c:"pos"},
+{d:"Announced March 2026",co:"Adobe",tk:"ADBE",who:"Shantanu Narayen departing",role:"Chief Executive",
+ why:"Ending an 18-year tenure.",n:"The search comes <b>amid intense investor pressure</b> to defend market leadership against a wave of AI startups. A long tenure ending under pressure is a different event from one ending on schedule.",c:"neg"},
+{d:"Mid-2026",co:"AIG",tk:"AIG",who:"Peter Zaffino → Eric Andersen",role:"Chief Executive",
+ why:"Zaffino moves to executive chair.",n:"Andersen inherits the fallout of a complex restructuring.",c:"gold"},
+{d:"2026",co:"Diageo",tk:"DEO",who:"Debra Crew out; CFO Nik Jhangiani interim",role:"Chief Executive",
+ why:"Stepped down <b>\"by mutual agreement\"</b> after two years.",
+ n:"Two red flags in one line: mutual agreement after a short tenure, and the finance chief taking the seat on an interim basis.",c:"neg"},
+{d:"17 Apr 2026",co:"Fermi",tk:"FRMI",who:"Toby Neugebauer removed",role:"Chief Executive and CFO",
+ why:"<b>Removed by the board.</b> The finance chief resigned two days later.",
+ n:"The board created an Interim Office of the CEO with the operating chief and a board observer as co-presidents, and launched a formal search. <b>This is the textbook pattern: an involuntary removal followed immediately by the finance chief leaving.</b>",c:"neg"},
+{d:"16 Mar 2026",co:"Fortune Brands",tk:"FBIN",who:"Nicholas Fink out; CFO Baksht out",role:"Chief Executive and CFO",
+ why:"Both departed the same day, both replaced on an interim basis.",
+ n:"A comprehensive search was launched the same day. Simultaneous same-day departures of both roles is among the strongest governance warnings available.",c:"neg"},
+{d:"2026",co:"Renault",tk:"RNO",who:"Luca de Meo → François Provost",role:"Chief Executive",why:"Departure.",n:"—",c:"mu"},
+{d:"2026",co:"Wendy's",tk:"WEN",who:"Robert Wright in; Steve Cirulis CFO",role:"Chief Executive and CFO",
+ why:"<b>Third chief executive in three years.</b>",
+ n:"Appointed amid weak demand and activist investor pressure. The finance chief previously worked under the new chief executive at another chain — a familiar pairing brought in together.",c:"neg"},
+{d:"1 May 2026",co:"Integra LifeSciences",tk:"IART",who:"Chairman Stuart Essig steps in",role:"Chief Executive",
+ why:"Predecessor departed to pursue other opportunities.",
+ n:"Shares rose sharply on the announcement — investors read it as an execution reset rather than a loss.",c:"gold"},
+{d:"2026",co:"Verizon · LendingTree · Kemper",tk:"—",who:"Multiple",role:"Chief Executive",
+ why:"Separate transitions in the same week.",n:"At one insurer an interim president and chief executive stepped in the same day, with the shares down over 24% in a year and at a 52-week low — again, same-day means unplanned.",c:"neg"},
+{d:"Oct 2026",co:"Lumentum",tk:"LITE",who:"Vincent Retort retiring",role:"Executive",
+ why:"Planned retirement.",n:"Set after shares rose 531% against 15% for the index. <b>The healthiest version of this event.</b>",c:"pos"},
+{d:"2026",co:"Goodyear",tk:"GT",who:"Christina Zamarro out; Scott Deakin interim",role:"Chief Financial Officer",
+ why:"Stepping down.",n:"Interim replacement is a former public-company finance chief with 25 years of experience — an experienced caretaker rather than an internal promotion.",c:"gold"},
+{d:"2026",co:"Fortrea",tk:"FTRE",who:"Jason Knoblauch on paid leave",role:"Chief Financial Officer",
+ why:"<b>On paid leave</b>, with an 82-year-old brought in as interim.",
+ n:"The most serious category on this page. Paid leave means an open matter, not a departure.",c:"neg"},
+{d:"2026",co:"HF Sinclair",tk:"DINO",who:"CFO terminated",role:"CFO and Chief Executive",
+ why:"<b>Terminated</b>, with the chief executive seat also cycled.",
+ n:"Happening while the shares surge on oil price turmoil — a reminder that a rising price does not mean a stable boardroom.",c:"neg"},
+{d:"2026",co:"PagerDuty",tk:"PD",who:"Jennifer Tejada replaced",role:"Chief Executive",
+ why:"Replaced after years of shareholder losses.",n:"A long-delayed change rather than a sudden one.",c:"gold"},
+{d:"Feb 2026",co:"Coronado Global Resources",tk:"CRN",who:"Douglas Thompson resigning",role:"Chief Executive",
+ why:"Resigned after completing a three-year plan, to pursue new opportunities.",
+ n:"Departure framed around completed commitments — the language of a planned exit.",c:"pos"},
+{d:"30 Mar 2026",co:"Capri Holdings",tk:"CPRI",who:"Tyler Reddien appointed",role:"CFO and COO",
+ why:"Predecessor resigned voluntarily in 2025; the role sat interim for months.",
+ n:"During the gap the chairman personally took on IT and supply chain, and the legal chief took risk management. <b>When responsibilities get split among existing executives, the search is taking longer than planned.</b>",c:"gold"},
+{d:"2026",co:"Neogen · Seres · PureTech · Subway",tk:"—",who:"Multiple",role:"Chief Executive",
+ why:"Resignations and step-downs.",n:"Seres appointed <b>co-chief executives</b>, which is unusual and generally means the board could not settle on one candidate.",c:"gold"},
+{d:"2026",co:"Netskope · WD-40 · CVRx",tk:"—",who:"Multiple",role:"Chief Financial Officer",
+ why:"Resignations.",n:"Three finance chief resignations tracked in a single period.",c:"gold"}
+];
+
+const LSTATS = [
+ ["24 CEO and 21 CFO changes","in a single tracked week","One analysis described that week as succession moving <b>from emergency cleanup to portfolio rotation</b>."],
+ ["16 CEO and 18 CFO changes","another tracked week, with industrials leading on 7","Leadership resets were split between market leaders and what the analysis called governance problem children."],
+ ["Both roles changing together","the pattern to fear","Altria paired a chief executive handover with a finance chief change; one healthcare company reset three senior finance and operating seats at once."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ $("#tabs").insertAdjacentHTML("beforeend",`<div class="tab" data-t="lead"><i>♟</i>LEADERSHIP</div>`);
+ document.getElementById("panels").insertAdjacentHTML("beforeend",`<div class="panel" id="p-lead"><div class="w" id="c-lead"></div></div>`);
+ document.querySelectorAll(".tab").forEach(x=>x.onclick=()=>go(x.dataset.t));
+
+ $("#c-lead").innerHTML=`
+ <div class="sh"><b>LEADERSHIP</b> · WHO RUNS THESE COMPANIES, AND WHO JUST LEFT</div>
+ <div class="lede">Executive changes are one of the few company events that arrive with a <b>date and a reason attached</b>, which makes them readable in the same way a policy measure is. This tab has three parts: how to read a change, who runs the companies you track, and what has happened across the wider market in 2026.</div>
+
+ <div class="sh"><b>1 · HOW TO READ A LEADERSHIP CHANGE</b></div>
+ <div class="lede">The same announcement can be routine or alarming depending on four things: whether it was planned, whether the replacement is permanent, whether the finance chief went too, and what the filing language says.</div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${LREAD.map(r=>`<div class="blk ${r.c}"><div class="h">${r.t}</div>${r.b}</div>`).join("")}
+ </div>
+
+ <div class="sh"><b>2 · YOUR HOLDINGS</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th>Role</th><th>Who</th><th>Status</th><th style="min-width:420px">What matters about it</th></tr></thead><tbody>
+ ${MINE.map(m=>m.r.map((r,i)=>`<tr class="wrap">
+  ${i==0?`<td rowspan="${m.r.length}"><b>${m.tk}</b><div class="tx2" style="font-size:10px">${m.co}</div></td>`:''}
+  <td class="mono gold">${r[0]}</td><td><b>${r[1]}</b></td><td class="tx2">${r[2]}</td>
+  <td class="${r[4]=='neg'?'neg':r[4]=='gold'?'gold':''}">${r[3]}</td></tr>`).join("")).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>3 · COMPANIES YOU RECENTLY SOLD</b> · relevant to the buy-back register</div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${SOLDCO.map(s=>`<tr class="wrap"><td style="width:160px"><b>${s.tk}</b><div class="tx2" style="font-size:10px">${s.co}</div></td>
+  <td class="${s.c=='pos'?'':''}">${s.e}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="blk g"><div class="h">Worth registering</div>Every company you sold has stable, identifiable leadership with insiders who were <b>buying</b>. Every company you kept has either a documented seller, a late filing, or a disclosure regime that hides the answer. That is not a coincidence — it is the same pattern the portfolio tab flagged, seen from a different angle.</div>
+
+ <div class="sh"><b>4 · THE WIDER MARKET IN 2026</b></div>
+ <div class="lede">Sorted by how much it tells you, not by company size. Read the <b>reason</b> column first — that is where the information is.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Date</th><th>Company</th><th>Role</th><th>Who</th><th style="min-width:250px">Reason</th><th style="min-width:400px">What it says</th></tr></thead><tbody>
+ ${MAJOR.map(m=>`<tr class="wrap" ${m.c=='neg'?'style="background:#fdf7f7"':''}>
+  <td class="mono gold">${m.d}</td><td><b>${m.co}</b>${m.tk!="—"?`<div class="mu mono" style="font-size:9px">${m.tk}</div>`:''}</td>
+  <td class="tx2" style="font-size:10px">${m.role}</td><td>${m.who}</td><td>${m.why}</td><td>${m.n}${SB('ct')}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>5 · THE BASE RATE</b> · how common is this really</div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${LSTATS.map(s=>`<tr class="wrap"><td class="mono gold" style="width:220px"><b>${s[0]}</b><div class="mu" style="font-size:10px">${s[1]}</div></td><td>${s[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="warn goldbox"><div class="h">The point of the base rate</div>
+ Roughly twenty chief executive changes and twenty finance chief changes happen in a single week across the US market. <b>A leadership change on its own is not news.</b> What makes it information is the combination: same-day effective date, an interim replacement, the finance chief leaving too, a short tenure, or paid leave.<br><br>
+ One or two of those is worth reading. Three or four in the same announcement is a governance event, and the market usually works that out faster than the company would like.</div>
+
+ <div class="warn"><div class="h">What is not covered here</div>
+ This is what could be verified from public reporting. It is not a complete register — dozens of changes happen weekly and only the larger or more unusual ones get written about. For your own holdings the reliable source is the company's own filings, and for two of them (Xiaomi under the Hong Kong regime, VCI Global with a late annual report) the information is structurally limited no matter where you look.</div>
+ <div style="height:40px"></div>`;
+
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v27 · LEADERSHIP";
+},3100);
+
+/* ═══════════ v28 — THE TOOLKIT · TWELVE EXTENSIONS ═══════════ */
+
+/* 1 · TRIGGER SHEET */
+const TRIG = [
+{tk:"MP",now:"~$60",t:[
+ ["Price reaches $64","DO NOT ADD","A named seller with ~12m shares operates in the $63–72 band. 19 sales, 0 purchases in five years. His window reopened 6 August.","neg"],
+ ["A new Form 4 sale appears","EXPECTED, NOT A SURPRISE","Decide now what you do. Deciding after the filing is deciding under pressure.","gold"],
+ ["Support income back above 100% of adjusted profit","EXIT","Operations are subtracting again; the whole thesis reverses.","neg"],
+ ["27 November passes with no tightening","REVIEW","The only structural catalyst disappears.","gold"],
+ ["Position exceeds 32% of shares","TRIM TO TARGET","It grew because it worked, not because you decided it should.","gold"]]},
+{tk:"BBAI",now:"~$3.04–3.12",t:[
+ ["Share count grows faster than backlog, two quarters running","EXIT","This is an issuance vehicle, not a defence company.","neg"],
+ ["A second financing facility announced","TRIM HARD","The first already authorises up to 100m shares.","neg"],
+ ["Rally towards $3.50","EXPECT SUPPLY","That is where the company itself becomes a seller.","gold"],
+ ["Contract wins fall below ~10 per quarter","EXIT","Annual guidance becomes unreachable.","neg"],
+ ["Position exceeds 40% of shares","TRIM","Largest position, undated dominant risk.","gold"]]},
+{tk:"3CP",now:"reports 26 Aug",t:[
+ ["Before 25 August closes","DECIDE THE WEIGHT","32.6% reporting in NVIDIA's shadow. Leaving it is fine; leaving it by default is not.","neg"],
+ ["Second consecutive profit miss","EXIT","Confirms the bear case; HK$25 has nobody defending it.","neg"],
+ ["Vehicle margin below 20% while phones shrink","EXIT","No engine left to pay for the decline.","neg"],
+ ["China tightens 27 November","REBALANCE AGAINST MP","You are net short that decision.","gold"]]},
+{tk:"VCIG",now:"~€10 total",t:[
+ ["Any outcome at all","DECIDE, DO NOT MANAGE","Costs more attention than it can return. Close it or write it to zero.","neg"]]},
+{tk:"MACRO",now:"—",t:[
+ ["Rate-rise odds above 65%","REDUCE BROADLY","72.6% of your shares are rate-negative with zero offset.","neg"],
+ ["Brent above $100","INFLATION CHANNEL REOPENS","Revives the hike that just fell to ~31–34%.","neg"],
+ ["Strait transits back above ~60/day","REGIME CHANGE","Genuine reopening. Ship counts beat statements.","gold"],
+ ["Volatility index above 25","SIZE OVER THESIS","Correlations converge; hedges stop working.","neg"],
+ ["Core inflation above 3.0%","EASING TREND BROKEN","Especially if services rather than energy leads.","neg"]]}
+];
+
+/* 2 · SHORT INTEREST */
+const SHORTS = [
+ ["MP","26.8m shares","18.7% of float","down 7.1%","<b>Part of the +58% move.</b> A fifth of the float short means a rally forces buying unrelated to the business.","neg"],
+ ["BBAI","—","20.67% of float","0.9 days to cover","Highest short share in your book, but it can be flat in one session. Squeezes here are violent and brief, not durable.","neg"],
+ ["GSHD","—","~9.3% of float","7.6 days to cover","<b>The opposite shape.</b> Shorts cannot exit quickly, which is why the support level held. Sold.","pos"],
+ ["3CP","not verified","—","—","Hong Kong primary listing; short data is not comparable to US reporting.","mu"]
+];
+
+/* 3 · IMPLIED MOVE */
+const IMPLIED = [
+ ["26 Aug","NVIDIA + Xiaomi","",""],["27–29 Aug","Jackson Hole","",""],
+ ["4 Sep","August jobs","",""],["11 Sep","August inflation","",""],
+ ["16–17 Sep","Rate decision","",""],["18 Sep","Quad witching","",""]
+];
+
+/* 4 · LEGAL DOCKET */
+const LEGAL = [
+ ["VCIG","Annual report over six months overdue","REGULATORY","The company has already told the regulator it would miss the deadline. Exchange minimum-bid rules also apply, and the price sits far below the line. <b>This is the entire thesis.</b>","neg"],
+ ["MP","No known action","—","Nothing found. Verify against the legal proceedings section of the next quarterly filing.","mu"],
+ ["BBAI","No known action","—","Nothing found. Small-cap AI names with heavy issuance are a common target for securities class actions — worth checking each quarter rather than assuming.","gold"],
+ ["3CP","Not verifiable at this level","—","Hong Kong regime; litigation disclosure is not comparable.","mu"]
+];
+
+/* 6 · CUSTOMER CONCENTRATION */
+const CONC = [
+ ["MP","Magnet supply to a single major carmaker; a new long-term contract with one aerospace and defence customer; and the government price guarantee itself.","<b>The government is simultaneously customer, shareholder and price-setter.</b> That is unusual protection and unusual dependence in the same sentence.","gold"],
+ ["BBAI","Government and defence contracts. Backlog $269.6m across 20+ wins.","Wins are numerous, which reduces single-customer risk — but they share one paymaster. A budget freeze hits all of them at once.","gold"],
+ ["3CP","Consumer sales, genuinely diversified. But manufacturing inputs are concentrated in materials China itself controls.","The concentration risk here is on the supply side, not the customer side — which is exactly what 27 November touches.","neg"],
+ ["VCIG","Not determinable from available filings.","Where the annual report is late, concentration cannot be assessed.","neg"]
+];
+
+/* 7 · ESTIMATE REVISIONS */
+const REVIS = [
+ ["MP","Mean target $75.38 · 13 Strong Buy, 5 Buy of 18","RISING","Three brokers cut targets in July and the shares then rose 14%, so treat the level as weak evidence — but the <b>direction</b> of revisions after the Q2 beat is what matters, and it turned up.","pos"],
+ ["BBAI","One broker cut $5 → $4 despite a headline beat","FALLING","A cut immediately after good numbers usually means the analyst is modelling dilution rather than doubting the business.","neg"],
+ ["3CP","Consensus HK$44.61 · bulls above HK$80 · one bear at HK$25.49","WIDEST SPREAD IN THE BOOK","The spread itself is the information: the market does not agree on what this company is.","neg"]
+];
+
+/* 8 · THE ONE NUMBER OVER TIME */
+const TREND = [
+ {tk:"MP",m:"Government support income as % of adjusted profit",v:[["Q1 2026","115.5%","neg"],["Q2 2026","~62%","pos"],["Q3 2026","—","mu"],["Q4 2026","—","mu"]],
+  n:"The only holding where you have two consecutive readings, and they moved sharply the right way. Below 50% would mean operations carry the company outright."},
+ {tk:"BBAI",m:"Share count against the 100m authorisation",v:[["Q2 2026","baseline","mu"],["Q3 2026","—","mu"],["Q4 2026","—","mu"],["Q1 2027","—","mu"]],
+  n:"Now measurable as a percentage of the ceiling rather than an unknown. First reading due with the Q3 filing in early November."},
+ {tk:"3CP",m:"Vehicle margin versus phone revenue change",v:[["Q1 2026","25.5% / declining","gold"],["Q2 2026","due 26 Aug","mu"],["Q3 2026","—","mu"],["Q4 2026","—","mu"]],
+  n:"Two numbers in one row on purpose — this position is two businesses and the ratio between them is the thesis."}
+];
+
+/* 10 · BACKTEST */
+const BACKTEST = [
+ ["The claim being tested","A code-P insider purchase predicts outperformance in the following six months."],
+ ["What you need","Every code-P purchase in your universe over two years: ticker, date, buyer role, size."],
+ ["What you measure","Share price six months later versus the sector, not versus zero. Absolute returns will flatter every result in a rising market."],
+ ["What would surprise you","If clusters beat single purchases by less than you expect — most published research finds the effect concentrated in small companies and in purchases by officers rather than directors."],
+ ["Why it matters","Gate 3 is the gate you spent the most effort on. It has never been measured on <b>your</b> universe. A negative result is as useful as a positive one."]
+];
+
+/* 12 · VERSION DIFF */
+const DIFF = [
+ ["27 → 28","Toolkit added: trigger sheet, short interest layer, legal docket, concentration, revisions, trend tracking, position calculator.","—"],
+ ["26 → 27","Leadership tab added.","MP identified as the driver of the portfolio move, now 6.5% below the seller's band."],
+ ["25 → 26","Portfolio move attributed to MP: +58% in three weeks.","BBAI slightly lower; the move was one position, not four."],
+ ["24 → 25","Risk-off week processed.","<b>Conclusion reversed:</b> bitcoin broke $64k on volume, so the written rule 'treat as unrelated' no longer applies."],
+ ["23 → 24","Commodities and decision tree added.","<b>Correction:</b> hike odds fell from 82% to ~31–34% — the market moved away from a hike, not towards one."],
+ ["22 → 23","Yellow Cake assessed.","<b>Verdict revised from the previous day:</b> from '3 of 5, not a disqualification' to 'does not fit the system'."],
+ ["21 → 22","Iran-to-China transmission chain added.","New link: sanctions on Chinese banks would raise the probability attached to 27 November."],
+ ["19 → 21","Six positions closed, then Ageas.","Rate hedge went to zero. Chip cluster went from 56.4% to 99.9%."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ $("#tabs").insertAdjacentHTML("beforeend",`<div class="tab" data-t="tool"><i>⚒</i>TOOLKIT</div>`);
+ document.getElementById("panels").insertAdjacentHTML("beforeend",`<div class="panel" id="p-tool"><div class="w" id="c-tool"></div></div>`);
+ document.querySelectorAll(".tab").forEach(x=>x.onclick=()=>go(x.dataset.t));
+
+ $("#c-tool").innerHTML=`
+ <div class="sh"><b>TOOLKIT</b> · TWELVE EXTENSIONS</div>
+ <div class="lede">Everything that was on the improvement list, applied. Where the data exists it is filled in. Where it does not, the structure is here with the field marked empty rather than guessed — <b>a gap you can see is useful, a gap filled with an assumption is dangerous.</b></div>
+
+ <div class="sh"><b>1 · THE TRIGGER SHEET</b> · print this one</div>
+ <div class="lede">Every tripwire in the dashboard on one page. This is the only section you will use at the moment something goes wrong, and at that moment you do not want to scroll through seventeen tabs.</div>
+ ${TRIG.map(g=>`<div class="card" style="margin-bottom:10px">
+  <div class="ct"><div class="ctl" style="font-size:14px">${g.tk}</div><div class="mono tx2">${g.now}</div></div>
+  <div class="tw"><table><tbody>
+  ${g.t.map(t=>`<tr class="wrap"><td style="width:38%"><b>${t[0]}</b></td>
+   <td style="width:18%"><span class="tag st ${t[3]}">${t[1]}</span></td><td>${t[2]}</td></tr>`).join("")}
+  </tbody></table></div></div>`).join("")}
+
+ <div class="sh"><b>2 · SHORT INTEREST & SQUEEZE MECHANICS</b></div>
+ <div class="lede">You saw this work in real time: MP's rally was partly forced buying. The key column is <b>days to cover</b> — it decides whether a squeeze is violent and brief or slow and durable.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th class="n">Shares short</th><th class="n">% of float</th><th class="n">Days to cover</th><th style="min-width:440px">What it means</th></tr></thead><tbody>
+ ${SHORTS.map(s=>`<tr class="wrap"><td><b>${s[0]}</b></td><td class="n mono">${s[1]}</td>
+  <td class="n mono ${s[5]=='neg'?'neg':s[5]=='pos'?'pos':'mu'}"><b>${s[2]}</b></td><td class="n mono">${s[3]}</td><td>${s[4]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>3 · OPTION IMPLIED MOVE</b> · the biggest remaining gap</div>
+ <div class="warn"><div class="h">Why this matters more than it sounds</div>
+ The volatility index sits near 15 going into NVIDIA, Jackson Hole and the rate decision. <b>That is the market stating it expects a quiet month</b> — into a calendar that is not quiet. Without the implied move per event, your calendar treats every date as equally unexpected, which is certainly wrong.<br><br>
+ Fill these six from your broker's option chain. It takes ten minutes and turns the calendar into a price calendar.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Date</th><th>Event</th><th class="n">Implied move</th><th class="n">Typical actual move</th><th>Reading</th></tr></thead><tbody>
+ ${IMPLIED.map(i=>`<tr><td class="mono gold"><b>${i[0]}</b></td><td>${i[1]}</td>
+  <td class="n" contenteditable style="background:#fbf8ef;min-width:90px">—</td>
+  <td class="n" contenteditable style="background:#fbf8ef;min-width:90px">—</td>
+  <td class="mu">implied below actual = cheap · implied above = already priced</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>4 · LEGAL & REGULATORY DOCKET</b></div>
+ <div class="lede">Lawsuits and regulatory matters carry a date and a counterparty — exactly the evidence class this system is built on. Check the legal proceedings section of each quarterly filing rather than relying on news.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th>Matter</th><th>Type</th><th style="min-width:480px">Status</th></tr></thead><tbody>
+ ${LEGAL.map(l=>`<tr class="wrap"><td><b>${l[0]}</b></td><td>${l[1]}</td>
+  <td><span class="tag st ${l[4]}">${l[2]}</span></td><td>${l[3]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>5 · INSTITUTIONAL OWNERSHIP</b> · the missing half</div>
+ <div class="warn"><div class="h">Structure ready, data not fetched</div>
+ The insider layer is complete and verified. The far larger flow — who the big holders are and whether they added last quarter — is absent. For thinly covered names that is the missing half of the level story.<br><br>
+ <b>Source:</b> quarterly institutional filings, available free with a delay. <b>What to record per position:</b> top five holders, combined percentage, and the change from the previous quarter. The change is the signal; the level is context.<br><br>
+ One data point you already have: at Goosehead a 10% owner bought 153,723 shares discretionarily. That is an institutional holder acting like an insider — the strongest overlap between the two layers.</div>
+
+ <div class="sh"><b>6 · CUSTOMER & SUPPLY CONCENTRATION</b></div>
+ <div class="lede">If one customer is 30% of revenue, you own that customer too. This sits in the annual report and appears nowhere else in the dashboard.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th style="min-width:300px">Concentration</th><th style="min-width:400px">What it means</th></tr></thead><tbody>
+ ${CONC.map(c=>`<tr class="wrap"><td><b>${c[0]}</b></td><td>${c[1]}</td>
+  <td class="${c[3]=='neg'?'neg':''}">${c[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>7 · ESTIMATE REVISIONS</b> · direction, not level</div>
+ <div class="lede">A price target is an opinion. The <b>direction and speed</b> of earnings revisions has predictive history. Three quarters of downgrades is a signal; one target change is not.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th style="min-width:280px">Current picture</th><th>Direction</th><th style="min-width:420px">Reading</th></tr></thead><tbody>
+ ${REVIS.map(r=>`<tr class="wrap"><td><b>${r[0]}</b></td><td>${r[1]}${SB('an')}</td>
+  <td><span class="tag st ${r[3]=='pos'?'pos':r[3]=='neg'?'neg':'gold'}">${r[2]}</span></td><td>${r[3]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>8 · THE ONE NUMBER, TRACKED OVER TIME</b></div>
+ <div class="lede">Each position card carries a single decisive number as a snapshot. As a series it tells you whether it is improving or deteriorating — which is the actual question.</div>
+ <div class="grid g3" style="margin-bottom:14px">
+ ${TREND.map(t=>`<div class="card"><div class="ctl" style="font-size:13px">${t.tk}</div>
+  <div class="tx2" style="font-size:11px;margin:4px 0 8px">${t.m}</div>
+  <div class="tw"><table><tbody>${t.v.map(v=>`<tr><td class="mono mu" style="font-size:10px">${v[0]}</td>
+   <td class="n mono ${v[2]}"><b>${v[1]}</b></td></tr>`).join("")}</tbody></table></div>
+  <div class="note">${t.n}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>9 · REAL CORRELATION MATRIX</b></div>
+ <div class="warn"><div class="h">Structure ready, needs a price series</div>
+ The driver heat map is a judgement about mechanisms. With daily closing prices over twelve months you can calculate what the correlations <b>actually</b> are.<br><br>
+ <b>Where the two disagree is the most interesting question in the dashboard:</b> either the mechanism is wrong, or the market has not priced it yet. One is an error to fix, the other is an opportunity — and you cannot tell which without the numbers.<br><br>
+ What to supply: one CSV of daily closes for your positions and the six instruments. The calculation is trivial once the data exists.</div>
+
+ <div class="sh"><b>10 · BACKTEST YOUR OWN SCREEN</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${BACKTEST.map(b=>`<tr class="wrap"><td class="mono gold" style="width:230px"><b>${b[0]}</b></td><td>${b[1]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>11 · POSITION SIZE CALCULATOR</b> · working</div>
+ <div class="lede">The cones say "if the distance to the lower line is more than you are willing to lose, the position is too large" — but never calculate it. This does.</div>
+ <div class="card" style="margin-bottom:14px">
+  <div class="ctrl">
+   <div><div class="desk">MAX LOSS (€)</div><input class="inp" id="ml" value="500" style="width:120px"></div>
+   <div><div class="desk">ENTRY PRICE</div><input class="inp" id="ep" value="60.00" style="width:120px"></div>
+   <div><div class="desk">EXIT / STOP LEVEL</div><input class="inp" id="sp" value="41.00" style="width:120px"></div>
+   <div><div class="desk">CURRENCY RATE (EUR/USD)</div><input class="inp" id="fx" value="1.1556" style="width:120px"></div>
+   <button class="btn act" onclick="calcSize()" style="align-self:flex-end">calculate</button>
+  </div>
+  <div id="calcout" style="margin-top:12px"></div>
+ </div>
+
+ <div class="sh"><b>12 · VERSION DIFFERENCES</b> · what changed and what reversed</div>
+ <div class="lede">A changelog says what was added. This says <b>which conclusions changed</b> — which is the part you learn from.</div>
+ <div class="tw"><table><thead><tr><th class="n">Versions</th><th style="min-width:340px">What was added</th><th style="min-width:420px">What reversed or was corrected</th></tr></thead><tbody>
+ ${DIFF.map(d=>`<tr class="wrap"><td class="n mono gold"><b>${d[0]}</b></td><td>${d[1]}</td>
+  <td class="${d[2]!="—"?'neg':'mu'}">${d[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="warn goldbox"><div class="h">Three reversals in six versions</div>
+ The bitcoin rule was falsified by its own written condition. The direction of rate expectations was corrected. A candidate verdict was revised the day after it was given.<br><br>
+ <b>That rate of correction is not a flaw — it is the system working.</b> A dashboard that never contradicts itself is either not being checked or not saying anything.</div>
+
+ <div class="sh"><b>ONE THING DELIBERATELY NOT BUILT</b></div>
+ <div class="warn"><div class="h">Tax-loss harvesting</div>
+ Standard in American dashboards, and usually irrelevant for a Belgian private investor, because normal management of private wealth has generally not been subject to capital gains tax. There has been discussion of a levy from 2026 onwards.<br><br>
+ <b>Verify this with your own adviser rather than with a dashboard.</b> It is not a layer worth building on an assumption, and getting it wrong in either direction is expensive.</div>
+ <div style="height:40px"></div>`;
+
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v28 · TOOLKIT";
+},3300);
+
+function calcSize(){
+ const ml=parseFloat(document.getElementById("ml").value)||0;
+ const ep=parseFloat(document.getElementById("ep").value)||0;
+ const sp=parseFloat(document.getElementById("sp").value)||0;
+ const fx=parseFloat(document.getElementById("fx").value)||1;
+ const out=document.getElementById("calcout");
+ if(!ep||!sp||ep<=sp){out.innerHTML=`<div class="warn">Entry price must be above the exit level. If you are shorting, swap the two.</div>`;return;}
+ const riskUsd=ep-sp, riskEur=riskUsd/fx;
+ const shares=Math.floor(ml/riskEur);
+ const posUsd=shares*ep, posEur=posUsd/fx;
+ const pctDrop=(riskUsd/ep*100);
+ const shareTot=11118.68, pctPf=posEur/(shareTot+posEur)*100;
+ out.innerHTML=`<div class="grid g4" style="margin-bottom:10px">
+  <div class="card"><div class="desk">SHARES</div><div class="ctr gold" style="text-align:left;font-size:24px">${shares.toLocaleString('en-GB')}</div><div class="mu">at the entry price</div></div>
+  <div class="card"><div class="desk">POSITION SIZE</div><div class="ctr" style="text-align:left;font-size:24px">${eur(posEur)}</div><div class="mu">$${nf(posUsd,0)}</div></div>
+  <div class="card"><div class="desk">RISK PER SHARE</div><div class="ctr neg" style="text-align:left;font-size:24px">${eur(riskEur)}</div><div class="mu">${nf(pctDrop,1)}% drop to the exit level</div></div>
+  <div class="card"><div class="desk">SHARE OF PORTFOLIO</div><div class="ctr ${pctPf>15?'neg':'pos'}" style="text-align:left;font-size:24px">${nf(pctPf,1)}%</div><div class="mu">of shares, after buying</div></div>
+ </div>
+ <div class="blk ${pctPf>15?'n':'p'}"><div class="h">Reading</div>
+ To risk ${eur(ml)} with an exit at ${sp}, buy <b>${shares.toLocaleString('en-GB')} shares</b> — a position of ${eur(posEur)}.
+ ${pctPf>15?`<b class="neg"> That is ${nf(pctPf,1)}% of your share portfolio, above a 15% ceiling.</b> Either accept a smaller maximum loss, or set the exit level closer.`:` That sits within a 15% position ceiling.`}
+ <br><br><b>The uncomfortable check:</b> if the exit level is a long way below the entry, the calculator returns few shares. That is not the tool being unhelpful — it is telling you the trade needs a tighter exit or a smaller ambition.</div>`;
+}
+window.calcSize=calcSize;
+
+/* ═══════════ v29 — STRUCTURAL CLEAN-UP ═══════════
+   Three problems found in the audit:
+   1. New tabs were appended after the reference tabs, so numbering broke.
+   2. The start tab had grown to 21 stacked sections, with the actual
+      explanation buried at position 21.
+   3. The superseded Yellow Cake assessment still sat below the revised one. */
+
+/* ── 1 · TAB ORDER ── */
+const ORDER = [
+ ["start","0","START HERE"],
+ ["macro","1","MACRO"],
+ ["eng","2","THE ENGINES"],
+ ["sect","3","SECTORS"],
+ ["ins","4","INSIDERS"],
+ ["lead","5","LEADERSHIP"],
+ ["riv","6","RIVALS"],
+ ["pf","7","PORTFOLIO"],
+ ["dec","8","DECIDE"],
+ ["conn","9","CONNECTIONS"],
+ ["cal","10","CALENDAR"],
+ ["cmd","11","COMMODITIES"],
+ ["scan","12","UNIVERSE SCAN"],
+ ["pipe","13","PIPELINE"],
+ ["mng","14","MANAGE"],
+ ["tool","15","TOOLKIT"],
+ ["src","·","SOURCES"],
+ ["gl","?","GLOSSARY"]
+];
+
+/* ── 2 · START TAB SEGMENTS ──
+   Matched on the opening words of each section header. */
+const SEG = [
+ {k:"WHY YOUR PORTFOLIO WENT UP",g:"now"},
+ {k:"WHAT DROVE IT · five reasons",g:"now"},
+ {k:"THE OTHER THREE",g:"now"},
+ {k:"READY FOR THE WEEK",g:"ahead"},
+ {k:"TWO NEW DEVELOPMENTS",g:"ahead"},
+ {k:"THE WEEK, DAY BY DAY",g:"ahead"},
+ {k:"DECIDE THESE BEFORE MONDAY",g:"ahead"},
+ {k:"THE DAILY PROMPT",g:"ahead"},
+ {k:"DOES YELLOW CAKE BELONG",g:"decided"},
+ {k:"SO WHAT DO YOU DO WITH IT",g:"decided"},
+ {k:"THE NUCLEAR GAP",g:"decided"},
+ {k:"START HERE · HOW THIS WORKS",g:"howto"},
+ {k:"THURSDAY 20 AUGUST",g:"arch"},
+ {k:"WHAT DROVE IT",g:"arch"},
+ {k:"WHAT IT MEANS FOR YOUR FOUR POSITIONS",g:"arch"},
+ {k:"SATURDAY 15 AUGUST",g:"arch"},
+ {k:"CANDIDATE ASSESSED",g:"super"},
+ {k:"TODAY ·",g:"arch"},
+ {k:"WHAT MOVED",g:"arch"},
+ {k:"STEP 1 —",g:"arch"},
+ {k:"WHAT IT MEANS FOR WHAT YOU HOLD",g:"arch"}
+];
+
+const GRP = {
+ now:{t:"TODAY",s:"The most recent reading. Everything below this is either reference or history.",c:"gold"},
+ ahead:{t:"THE WEEK AHEAD",s:"Still live — decisions and dates that have not yet passed.",c:"pos"},
+ decided:{t:"DECIDED",s:"Questions that have been settled. Kept because the reasoning is reusable, not because the question is open.",c:"inf"},
+ howto:{t:"HOW THIS DASHBOARD WORKS",s:"The permanent explanation. Read once, return when something is unclear.",c:"inf"},
+ super:{t:"SUPERSEDED",s:"Written before a later assessment reversed it. Kept visible on purpose — a dashboard that quietly deletes its own mistakes teaches you nothing.",c:"neg"},
+ arch:{t:"ARCHIVE",s:"Earlier daily updates, newest first. Useful for checking what was known when.",c:"mu"}
+};
+
+const AUDIT = [
+ ["Tab order broken","New tabs were appended after Sources and Glossary, so the numbering ran 0–10, then two symbols, then five unnumbered tabs.","Reordered into a logical flow: weather → mechanisms → companies → your holdings → decisions → tools. Reference tabs moved to the end where they belong.","fixed"],
+ ["The start tab had become a scroll","Five daily updates stacked on top of each other, twenty-one sections in total. The actual explanation of how the dashboard works had been pushed to position twenty-one — the bottom.","Grouped into six blocks: today, the week ahead, decided, how it works, superseded, archive. Newest first within the archive.","fixed"],
+ ["A superseded assessment sat below its own correction","The softer Yellow Cake verdict from one day was still on the page underneath the revised verdict from the next.","Relabelled explicitly as SUPERSEDED rather than removed.","fixed"],
+ ["Leadership sat away from Insiders","Both are about the same thing — who runs the company and what they do with their own shares.","Moved to position 5, directly after Insiders.","fixed"],
+ ["Decide sat away from Portfolio","You decide about what you own, so the two belong together.","Moved to position 8, directly after Portfolio.","fixed"],
+ ["Panel sizes are uneven","Sectors and Insiders are around 110KB each; Macro is 4KB because it renders on demand.","Not a fault — the large ones are tables that must exist. Noted so it is not mistaken for a bug.","noted"]
+];
+
+/* ── run ── */
+setTimeout(()=>{
+ /* reorder tabs and panels */
+ const tabs=$("#tabs"), panels=document.getElementById("panels");
+ ORDER.forEach(o=>{
+  const t=document.querySelector(`.tab[data-t="${o[0]}"]`), p=document.getElementById("p-"+o[0]);
+  if(t){t.innerHTML=`<i>${o[1]}</i>${o[2]}`; tabs.appendChild(t);}
+  if(p)panels.appendChild(p);
+ });
+ document.querySelectorAll(".tab").forEach(x=>x.onclick=()=>go(x.dataset.t));
+
+ /* restructure the start tab */
+ const c=$("#c-start"); if(!c)return;
+ const kids=[...c.children];
+ const segs=[]; let cur=null;
+ kids.forEach(el=>{
+  if(el.classList.contains("sh")){
+   const txt=el.textContent.replace(/\s+/g," ").trim();
+   const m=SEG.find(s=>txt.toUpperCase().startsWith(s.k.toUpperCase()));
+   cur={g:m?m.g:"arch",els:[el]}; segs.push(cur);
+  } else if(cur){cur.els.push(el);}
+  else {cur={g:"now",els:[el]}; segs.push(cur);}
+ });
+ c.innerHTML="";
+ ["now","howto","ahead","decided","super","arch"].forEach(g=>{
+  const list=segs.filter(s=>s.g==g); if(!list.length)return;
+  const G=GRP[g];
+  c.insertAdjacentHTML("beforeend",
+   `<div style="border-top:2px solid ${G.c=='gold'?'var(--acc)':G.c=='pos'?'var(--pos)':G.c=='neg'?'var(--neg)':G.c=='inf'?'var(--inf)':'var(--b2)'};margin:${g=="now"?"0":"28px"} 0 10px;padding-top:12px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap">
+     <div class="ctl" style="font-size:15px;color:${G.c=='gold'?'var(--acc2)':G.c=='neg'?'var(--neg)':'var(--tx)'}">${G.t}</div>
+     <div class="tx2" style="max-width:760px;text-align:right;font-size:11.5px">${G.s}</div></div></div>`);
+  const holder=document.createElement("div");
+  if(g=="arch"||g=="super")holder.style.opacity=".72";
+  list.forEach(s=>s.els.forEach(e=>holder.appendChild(e)));
+  c.appendChild(holder);
+ });
+
+ /* audit note at the very top */
+ c.insertAdjacentHTML("afterbegin",`
+ <div class="warn ok" style="margin-bottom:16px"><div class="h">STRUCTURE REVIEWED · v29</div>
+ The build was audited end to end. <b>Three real problems were found and fixed</b>, two things were moved for logic, and one was noted as expected rather than wrong. Details at the bottom of this tab.<br><br>
+ The most important change: this page had grown to twenty-one stacked sections with five daily updates on top of each other, and the explanation of how the dashboard works had ended up at the bottom. It is now grouped — <b>today first, then how it works, then what is still ahead, then history.</b></div>`);
+
+ /* audit table at the end */
+ c.insertAdjacentHTML("beforeend",`
+ <div style="border-top:2px solid var(--b2);margin:28px 0 10px;padding-top:12px">
+  <div class="ctl" style="font-size:15px">STRUCTURE AUDIT</div></div>
+ <div class="tw"><table><thead><tr><th style="min-width:230px">What was wrong</th><th style="min-width:380px">Detail</th><th style="min-width:380px">What changed</th><th>Status</th></tr></thead><tbody>
+ ${AUDIT.map(a=>`<tr class="wrap"><td><b>${a[0]}</b></td><td class="tx2">${a[1]}</td><td>${a[2]}</td>
+  <td><span class="tag st ${a[3]=='fixed'?'pos':''}">${a[3].toUpperCase()}</span></td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="warn goldbox"><div class="h">The rule this creates going forward</div>
+ Every daily update adds a section to this page. Left alone it grows without limit, and the useful part sinks. <b>From now on: a new update goes into TODAY, the previous one moves into ARCHIVE, and anything reversed gets relabelled SUPERSEDED rather than deleted.</b><br><br>
+ Keeping the superseded material visible is deliberate. Three conclusions have been reversed in the past week — the bitcoin rule, the direction of rate expectations, and the Yellow Cake verdict. A dashboard that quietly removes its own mistakes stops being a record of what you knew and when.</div>
+ <div style="height:40px"></div>`);
+
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v29 · STRUCTURE REVIEWED";
+},3500);
+
+/* ── refresh the "what each tab is for" list so it matches the new order ── */
+const TABDESC = {
+ macro:"The weather. What is happening in the world, from far away to close up.",
+ eng:"Why things move. Five mechanisms, each with the sentence that would prove it wrong.",
+ sect:"Every share being tracked, grouped by industry, best first.",
+ ins:"Who inside a company is buying or selling their own shares — plus the market-wide tape.",
+ lead:"Who runs these companies, who just left, and how to read a departure.",
+ riv:"Your holdings next to companies doing the same thing, and how to read the news on each.",
+ pf:"What you own, what it is worth, and what could go wrong.",
+ dec:"Add, hold, trim or close — with the macro levels that mean the weather actually changed.",
+ conn:"Charts, plus links between things that no research note draws.",
+ cal:"Every dated event, with what to do before each.",
+ cmd:"Oil, gold and silver, the rate decision tree, and the contract symbols.",
+ scan:"Which shares belong on the list and which do not.",
+ pipe:"How a new policy becomes a new candidate.",
+ mng:"Tax, currency, liquidity and stress testing.",
+ tool:"Trigger sheet, position calculator, short interest and the rest of the toolkit.",
+ src:"Where every number came from and how certain it is.",
+ gl:"Every abbreviation in this document, explained."
+};
+setTimeout(()=>{
+ const cards=[...document.querySelectorAll("#c-start .card")];
+ const target=cards.find(c=>/What each tab is for/i.test(c.textContent));
+ if(!target)return;
+ target.innerHTML=`<div class="ctl" style="font-size:13px;margin-bottom:6px">What each tab is for</div>`+
+  ORDER.filter(o=>o[0]!="start").map(o=>`<div style="display:flex;gap:10px;padding:5px 0;border-top:1px solid var(--bd)">
+   <b class="mono" style="width:34px;flex-shrink:0;font-size:10px;color:var(--acc2);text-align:right">${o[1]}</b>
+   <b class="mono" style="width:130px;flex-shrink:0;font-size:9.5px;color:var(--acc2)">${o[2]}</b>
+   <div class="tx2">${TABDESC[o[0]]||""}</div></div>`).join("");
+},3700);
+
+/* ═══════════ v30 — ELEVEN MORE, APPLIED ═══════════ */
+
+/* 13 · SOLD TRACKER */
+const SOLDTRACK = [
+ {tk:"GSHD",d:"14 Aug",px:66.81,q:35,r:"Best evidence in the book — two voluntary buyers under the price"},
+ {tk:"TWFG",d:"14 Aug",px:27.07,q:60,r:"Pre-announced weak Q4 ahead"},
+ {tk:"SOFI",d:"14 Aug",px:18.40,q:65,r:"Five-insider buying cluster including the chief executive"},
+ {tk:"MKTW",d:"14 Aug",px:19.29,q:60,r:"Only genuine diversifier in the portfolio"},
+ {tk:"PAX",d:"14 Aug",px:11.44,q:70,r:"One of two rate hedges"},
+ {tk:"AGS",d:"14 Aug",px:72.25,q:35,r:"Sold ahead of an unconfirmed results date"}
+];
+
+/* 14 · SECOND OPINION */
+const SECOND = [
+ ["The problem","Everything you read passes through one filter: this dashboard. When the source document reversed the Hormuz mechanism, nothing in your reading contradicted it — the correction only came from an external check."],
+ ["What to add","One macro source that thinks structurally differently. Not to follow, but to notice when you are inside a story that is only internally consistent."],
+ ["What good looks like","A source that disagrees with you regularly and explains why in mechanisms rather than in conclusions. If you never disagree with it, it is not doing the job."],
+ ["The tell","When a source only ever confirms what you already believe, you have found an echo, not a second opinion."],
+ ["Practical","Read it once a week, not daily. The value is in structural disagreement, not in headlines."]
+];
+
+/* 16 · CASH POLICY */
+const CASHPOL = [
+ ["DRY POWDER","Cash held to buy a specific thing at a specific price.","Requires a written trigger. Without one it is not dry powder — it is indecision with a nicer name.","gold"],
+ ["BUFFER","Cash held so a drawdown never forces a sale.","Sized against the stress test: a 30% fall on your shares is about €3,300. A buffer means never having to sell into that.","pos"],
+ ["WAITING","Cash held because nothing currently qualifies.","Entirely legitimate — and the honest label most of the time. In a market with forty insider purchases against nineteen hundred sales, most weeks nothing qualifies.","inf"]
+];
+
+/* 17 · TRANSACTION COSTS */
+const COSTS = [
+ ["Transaction tax","0.35% on every purchase and every sale","On the six sales of roughly €8,700 in proceeds: about €30"],
+ ["Broker commission","Per order, plus any currency conversion fee","Six sales in three hours means six commissions — check the actual figure in your statement"],
+ ["Currency conversion","Charged on every dollar trade for a euro account","100% of your shares are dollar-denominated, so this applies to every transaction you make"],
+ ["The cumulative question","What did this week cost in total?","Against a realised gain of roughly €2,030, costs of €60–100 are 3–5% of the gain. Worth knowing, not worth panicking about."]
+];
+
+/* 18 · SELL-SIDE CHECK ON CANDIDATES */
+const SELLCHK = [
+ ["Why it matters","Rocket Lab was on your candidate list for one day. It came off because its founder was the largest chief-executive seller of July — and that turned up by accident, not by design."],
+ ["The rule","Before adding any candidate, check the sell side as well as the buy side. A company with an insider purchase AND an executive unloading is not a clean signal."],
+ ["What disqualifies","A discretionary sale by the chief executive or finance chief within the same window as the purchase you are relying on."],
+ ["What does not","A sale under a pre-arranged plan, an award, or a tax withholding. Same codes as always."],
+ ["Where","The same filings feed you already use. It costs one extra look per candidate."]
+];
+
+/* 19 · SECTOR THERMOMETER */
+const THERMO = [
+ ["MP","Rare earths / critical minerals","On MP's biggest day the whole group moved: one peer around +8.5%, another around +3%. <b>So part of the 58% was the sector, not the company.</b>","Without a sector benchmark you cannot tell skill from tide."],
+ ["BBAI","Defence and government AI","Its comparison company grew revenue 93% while BBAI grew 13%. Same end market, very different execution.","A sector benchmark would have shown that gap continuously rather than at results."],
+ ["3CP","Consumer electronics and vehicles","Reports the same session as the largest chip company, so its first move may be about someone else entirely.","Here the benchmark tells you whether a move is Xiaomi or Asia."],
+ ["What to record","One sector proxy per position","Weekly: the position's move minus the sector's move.","That difference is the only part that is about the company."]
+];
+
+/* 20 · DEBT & MATURITIES */
+const DEBT = [
+ ["BBAI","<b>Debt fully eliminated</b>","A genuine strength that currently counts nowhere in the scoring. With long yields at a twenty-year high, having no refinancing need is worth more than it was a year ago.","pos"],
+ ["MP","Heavy capital spending — $307.7m in the first half, cash declining","Not debt as such, but the same question: how is it funded, and at what cost, if the shares stop rising.","gold"],
+ ["3CP","Vehicle division losing 3.1bn yuan per quarter","A loss-making division has to be financed by something. Check where from.","neg"],
+ ["VCIG","Financed by issuing shares","Which is the whole problem.","neg"],
+ ["What to record","Maturity wall per position: how much debt comes due, and when.","At a twenty-year high in long yields, refinancing at the wrong moment is a live risk rather than a footnote.","gold"]
+];
+
+/* 21 · WAITING PERIOD */
+const WAIT = {
+ t:"A night between deciding and executing",
+ b:`You closed six positions in about three hours. This is not a comment on the outcome — the result was roughly €2,030 realised. It is a comment on the speed.<br><br>
+ <b>One rule: at least one night between deciding and executing.</b> An idea that does not survive a night was not an idea.<br><br>
+ It costs almost nothing. In a market that moves 1% a day, waiting one night changes your price by pennies — and it removes the entire category of decisions you regret by Tuesday. The exception worth writing down: a genuine stop-loss trigger you set in advance executes immediately, because you already waited when you wrote it.`
+};
+
+/* 22 · CEILING */
+const CEIL = {
+ t:"A ceiling that trims automatically",
+ b:`You hold 39.8% in one name. That was not chosen — it grew, because the position worked and the others were sold. <b>A ceiling removes the emotion from that decision by making it arithmetic.</b><br><br>
+ Set one number. When a position crosses it, the excess is sold — not because the company got worse, but because you decided in advance that no single holding decides your year.`
+};
+
+/* ── render ── */
+setTimeout(()=>{
+ const t=$("#c-tool"); if(!t)return;
+ t.insertAdjacentHTML("beforeend",`
+ <div style="border-top:2px solid var(--acc);margin:30px 0 12px;padding-top:14px">
+  <div class="ctl" style="font-size:16px;color:var(--acc2)">ELEVEN MORE · ADDED v30</div>
+  <div class="tx2" style="margin-top:4px">Integrated here rather than as new tabs. You have eighteen already — the next thing that raises the value is filling the empty fields, not adding layers.</div></div>
+
+ <div class="sh"><b>13 · TRACK WHAT YOU SOLD</b> · working</div>
+ <div class="lede">Six positions closed and no place to see what they did next. <b>This is the cleanest learning available:</b> without it you never find out whether your selling rules work. Enter today's price and the table does the rest.</div>
+ <div class="tw" style="margin-bottom:8px"><table><thead><tr><th>Ticker</th><th class="n">Sold at</th><th class="n">Shares</th><th class="n">Price now</th><th class="n">Difference</th><th class="n">On the position</th><th style="min-width:300px">Why you sold</th></tr></thead>
+ <tbody id="soldbody"></tbody></table></div>
+ <div class="ctrl" style="margin-bottom:14px"><button class="btn act" onclick="calcSold()">recalculate</button>
+ <span class="mu" style="font-size:10.5px">type a price into the "price now" column, then press recalculate</span></div>
+
+ <div class="sh"><b>14 · A SECOND OPINION</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${SECOND.map(s=>`<tr class="wrap"><td class="mono gold" style="width:190px"><b>${s[0]}</b></td><td>${s[1]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>15 · CURRENCY ATTRIBUTION</b> · working</div>
+ <div class="lede">Recommended twice and still not calculated. You are 100% dollar-exposed. This splits your return into the part from the companies and the part from the exchange rate.</div>
+ <div class="card" style="margin-bottom:14px">
+  <div class="ctrl">
+   <div><div class="desk">POSITION VALUE NOW (€)</div><input class="inp" id="fv" value="11119" style="width:130px"></div>
+   <div><div class="desk">EUR/USD AT PURCHASE</div><input class="inp" id="f0" value="1.0900" style="width:120px"></div>
+   <div><div class="desk">EUR/USD NOW</div><input class="inp" id="f1" value="1.1556" style="width:120px"></div>
+   <button class="btn act" onclick="calcFx()" style="align-self:flex-end">calculate</button>
+  </div>
+  <div id="fxout" style="margin-top:12px"></div>
+  <div class="note">Use the average rate on your purchase dates. It sits in a broker export; the default here is an illustration, not your actual rate.</div>
+ </div>
+
+ <div class="sh"><b>16 · A CASH POLICY, NOT A CASH BALANCE</b></div>
+ <div class="lede">You hold €6,000–7,200 and no rule about what it <b>is</b>. These three lead to different decisions at the same price — and right now you choose between them implicitly, every day.</div>
+ <div class="grid g3" style="margin-bottom:14px">
+ ${CASHPOL.map(c=>`<div class="card"><div class="desk">${c[0]}</div>
+  <div style="font-weight:600;margin:5px 0">${c[1]}</div>
+  <div class="blk ${c[3]=='pos'?'p':c[3]=='inf'?'i':'g'}">${c[2]}</div></div>`).join("")}
+ </div>
+ <div class="warn"><div class="h">Write down the split</div>
+ Dry powder €<span contenteditable style="background:#fbf8ef;padding:0 22px">&nbsp;</span> · buffer €<span contenteditable style="background:#fbf8ef;padding:0 22px">&nbsp;</span> · waiting €<span contenteditable style="background:#fbf8ef;padding:0 22px">&nbsp;</span><br><br>
+ If all of it is dry powder, every one of those euros needs a written trigger. If most is waiting, that is fine — but say so, because "waiting" and "dry powder" produce very different behaviour when a headline appears.</div>
+
+ <div class="sh"><b>17 · WHAT TRADING COSTS YOU</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:180px">Cost</th><th style="min-width:280px">How it works</th><th style="min-width:400px">On this week</th></tr></thead><tbody>
+ ${COSTS.map(c=>`<tr class="wrap"><td><b>${c[0]}</b></td><td class="tx2">${c[1]}</td><td>${c[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>18 · CHECK THE SELL SIDE ON CANDIDATES TOO</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${SELLCHK.map(s=>`<tr class="wrap"><td class="mono gold" style="width:190px"><b>${s[0]}</b></td><td>${s[1]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>19 · A SECTOR THERMOMETER</b></div>
+ <div class="lede">You track individual names and whole indices, with nothing in between. A sector proxy tells you in one number whether your company is leading its sector or just floating on it.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th>Sector to benchmark against</th><th style="min-width:400px">Why it matters here</th><th style="min-width:280px">What it would have shown</th></tr></thead><tbody>
+ ${THERMO.map(x=>`<tr class="wrap"><td><b>${x[0]}</b></td><td class="tx2">${x[1]}</td><td>${x[2]}</td><td class="mu">${x[3]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>20 · DEBT AND WHEN IT COMES DUE</b></div>
+ <div class="lede">With long yields at a twenty-year high, when a company must refinance stopped being a footnote.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th style="min-width:220px">Position</th><th style="min-width:440px">What it means</th></tr></thead><tbody>
+ ${DEBT.map(x=>`<tr class="wrap"><td><b>${x[0]}</b></td><td class="${x[3]=='pos'?'pos':x[3]=='neg'?'neg':'gold'}">${x[1]}</td><td>${x[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>21 · ONE NIGHT BETWEEN DECIDING AND DOING</b></div>
+ <div class="warn goldbox" style="margin-bottom:14px"><div class="h">${WAIT.t}</div>${WAIT.b}</div>
+
+ <div class="sh"><b>22 · A CEILING THAT TRIMS ITSELF</b> · working</div>
+ <div class="lede">${CEIL.b}</div>
+ <div class="card" style="margin-bottom:14px">
+  <div class="ctrl"><div><div class="desk">CEILING (% OF SHARES)</div><input class="inp" id="ceil" value="25" style="width:110px"></div>
+  <button class="btn act" onclick="calcCeil()" style="align-self:flex-end">apply</button></div>
+  <div id="ceilout" style="margin-top:12px"></div>
+ </div>
+
+ <div class="sh"><b>23 · AN AFTER-ACTION COLUMN</b></div>
+ <div class="warn"><div class="h">The habit that makes everything else measurable</div>
+ After each dated event, write two lines: <b>what happened</b>, and <b>what you did</b>. Not to judge yourself — to see whether your actions correlate with your written rules or with your mood.<br><br>
+ You already have the first real test coming. On 26 August: NVIDIA and Xiaomi in the same session. Write down beforehand what you intend to do, and afterwards what you actually did. If those two match, the system works. If they do not, that is the most valuable thing this dashboard will ever tell you.</div>
+ <div style="height:40px"></div>`);
+
+ renderSold();
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v30 · COMPLETE";
+},3900);
+
+function renderSold(){
+ const b=document.getElementById("soldbody"); if(!b)return;
+ b.innerHTML=SOLDTRACK.map(s=>`<tr class="wrap" data-tk="${s.tk}">
+  <td><b>${s.tk}</b></td><td class="n mono gold"><b>${s.px}</b></td><td class="n mono">${s.q}</td>
+  <td class="n mono" contenteditable style="background:#fbf8ef;min-width:80px">—</td>
+  <td class="n mono diff">—</td><td class="n mono tot">—</td><td class="tx2">${s.r}</td></tr>`).join("");
+}
+function calcSold(){
+ const rows=[...document.querySelectorAll("#soldbody tr")];
+ let net=0, done=0;
+ rows.forEach(r=>{
+  const tk=r.dataset.tk, s=SOLDTRACK.find(x=>x.tk==tk);
+  const now=parseFloat((r.children[3].textContent||"").replace(",","."));
+  const dc=r.querySelector(".diff"), tc=r.querySelector(".tot");
+  if(!now||isNaN(now)){dc.textContent="—";tc.textContent="—";return;}
+  const pct=(now-s.px)/s.px*100, val=(now-s.px)*s.q;
+  net+=val; done++;
+  dc.textContent=(pct>0?"+":"")+nf(pct,1)+"%"; dc.className="n mono diff "+(pct>0?"neg":"pos");
+  tc.textContent=(val>0?"+":"")+nf(val,0); tc.className="n mono tot "+(val>0?"neg":"pos");
+ });
+ const out=document.getElementById("soldbody").parentElement.parentElement;
+ let box=document.getElementById("soldsum");
+ if(!box){box=document.createElement("div");box.id="soldsum";out.insertAdjacentElement("afterend",box);}
+ box.innerHTML=done?`<div class="blk ${net>0?'n':'p'}"><div class="h">What selling cost or saved you, on ${done} of 6 positions</div>
+  ${net>0?`Those positions are worth <b>${nf(net,0)}</b> more than where you sold. Selling cost you that much — <b>so far</b>. That is not a verdict; six weeks is not a horizon.`
+  :`Those positions are worth <b>${nf(Math.abs(net),0)}</b> less than where you sold. Selling saved you that much so far.`}
+  <br><br><b>Read this as a rule test, not a scoreboard.</b> The question is not whether you got the price right — it is whether the reason you gave still looks correct.</div>`:"";
+}
+function calcFx(){
+ const v=parseFloat(document.getElementById("fv").value)||0;
+ const f0=parseFloat(document.getElementById("f0").value)||1;
+ const f1=parseFloat(document.getElementById("f1").value)||1;
+ const o=document.getElementById("fxout");
+ const fxEff=(f0/f1-1)*100;
+ const fxEur=v-(v*f1/f0);
+ o.innerHTML=`<div class="grid g3" style="margin-bottom:8px">
+  <div class="card"><div class="desk">CURRENCY MOVE</div><div class="ctr ${fxEff>0?'pos':'neg'}" style="text-align:left;font-size:22px">${(fxEff>0?"+":"")+nf(fxEff,2)}%</div>
+   <div class="mu">${f0} → ${f1}</div></div>
+  <div class="card"><div class="desk">EFFECT IN EURO</div><div class="ctr ${fxEur>0?'pos':'neg'}" style="text-align:left;font-size:22px">${eur(fxEur)}</div>
+   <div class="mu">on ${eur(v)} of dollar-priced shares</div></div>
+  <div class="card"><div class="desk">SENSITIVITY</div><div class="ctr" style="text-align:left;font-size:22px">${eur(v*0.01)}</div>
+   <div class="mu">per 1% move in the rate</div></div>
+ </div>
+ <div class="blk ${fxEur>0?'p':'n'}"><div class="h">Reading</div>
+ ${fxEur>0?`A weaker dollar has <b>added</b> ${eur(fxEur)} to your euro value — money that came from the exchange rate, not from any company.`
+ :`A stronger euro has <b>removed</b> ${eur(Math.abs(fxEur))} from your euro value. The companies may have performed fine and you would still see this.`}
+ <br><br>Every 1% move is worth <b>${eur(v*0.01)}</b> to you. A 5% quarter is ${eur(v*0.05)} — decided entirely outside anything you analyse.</div>`;
+}
+function calcCeil(){
+ const c=parseFloat(document.getElementById("ceil").value)||25;
+ const o=document.getElementById("ceilout");
+ const tot=REM4.reduce((a,h)=>a+h.val,0);
+ const rows=REM4.map(h=>{const w=h.val/tot*100, over=w>c, target=tot*c/100, sell=over?h.val-target:0;
+  return {tk:h.tk,w:w,over:over,sell:sell};});
+ const totalSell=rows.reduce((a,r)=>a+r.sell,0);
+ o.innerHTML=`<div class="tw"><table><thead><tr><th>Ticker</th><th class="n">Weight now</th><th class="n">Ceiling</th><th class="n">To sell</th><th>Action</th></tr></thead><tbody>
+ ${rows.map(r=>`<tr><td><b>${r.tk}</b></td><td class="n mono ${r.over?'neg':''}">${nf(r.w,1)}%</td>
+  <td class="n mono mu">${nf(c,0)}%</td><td class="n mono ${r.over?'neg':'mu'}">${r.over?eur(r.sell):"—"}</td>
+  <td>${r.over?'<span class="tag st neg">TRIM</span>':'<span class="tag st pos">WITHIN</span>'}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="blk ${totalSell>0?'n':'p'}"><div class="h">Reading</div>
+ ${totalSell>0?`A ceiling of ${nf(c,0)}% would require selling about <b>${eur(totalSell)}</b> today, across ${rows.filter(r=>r.over).length} position${rows.filter(r=>r.over).length>1?'s':''}.
+ <b>Notice that this has nothing to do with whether you like those companies.</b> That is the entire point — the decision is arithmetic, taken in advance, and it removes the argument you would otherwise have with yourself.`
+ :`Nothing exceeds a ceiling of ${nf(c,0)}%. Set it lower to see where the first constraint would bite.`}</div>`;
+}
+window.calcSold=calcSold; window.calcFx=calcFx; window.calcCeil=calcCeil;
+
+/* ═══════════ v31 — EXACT PORTFOLIO · 23 AUGUST 05:51 ═══════════ */
+
+const P31 = {
+ ts:"23 August 2026, 05:51",
+ acc:19828.28, day:-19.01, dayPct:-0.10,
+ h:[
+  {tk:"BBAI",nm:"BigBear.ai Holdings",ex:"NYSE",px:3.22,cur:"$",qty:1553,gak:6.143421,val:4281.83,pl:-3971.54,plPct:-48.12},
+  {tk:"3CP",nm:"Xiaomi Corporation",ex:"Tradegate",px:3.147,cur:"€",qty:1239,gak:4.780655,val:3899.13,pl:-2024.10,plPct:-34.17},
+  {tk:"MP",nm:"MP Materials Class A",ex:"NYSE",px:60.05,cur:"$",qty:65,gak:63.900769,val:3342.17,pl:-261.21,plPct:-7.24},
+  {tk:"VCIG",nm:"VCI Global",ex:"Nasdaq",px:0.2129,cur:"$",qty:40,gak:4.955,val:7.29,pl:-163.28,plPct:-95.72}
+ ]};
+P31.shares=P31.h.reduce((a,x)=>a+x.val,0);
+P31.cash=P31.acc-P31.shares;
+P31.pl=P31.h.reduce((a,x)=>a+x.pl,0);
+P31.cost=P31.shares-P31.pl;
+P31.h.forEach(x=>x.w=x.val/P31.shares*100);
+const FX31=(P31.h[0].px*P31.h[0].qty)/P31.h[0].val;
+
+const FIND31 = [
+{t:"Your MP cost basis sits INSIDE the seller's band",c:"neg",pri:1,
+ b:`Your average price on MP is <b>$63.90</b>. The chief executive's documented selling band is <b>$63–72</b>.<br><br>
+ You did not buy near that zone — <b>you bought in it.</b>`,
+ w:`This reframes the whole MP position. The dashboard has been saying "do not add above $64" for weeks, and the honest reading is that the warning arrived after the entry, not before it.<br><br>
+ Two consequences follow. First, at $60.05 you are <b>−7.24%</b> on MP despite a 58% rally off the July low — because the rally started far below where you came in. Second, the level that caps the upside is roughly your own break-even. To get back to even, the price has to travel into the zone where a named seller with about 12 million shares has sold nineteen times and bought zero.<br><br>
+ That is not a reason to sell. It is a reason to be precise: <b>your break-even and his selling zone are the same price.</b>`},
+{t:"Xiaomi rose 7.5% since the last snapshot — and nobody noticed",c:"gold",pri:2,
+ b:`From €2.9285 on 12 August to <b>€3.147</b> now. The position went from €3,629 to €3,899.`,
+ w:`Everything this week was about MP, and meanwhile your second-largest position quietly added €270. It is still <b>−34.17%</b> against a cost of €4.78, so this is a bounce inside a large loss rather than a recovery.<br><br>
+ The relevant part: it reports in three days, in the same session as NVIDIA, at <b>33.8%</b> of your shares.`},
+{t:"The dollar weakened again, and it cost you",c:"neg",pri:3,
+ b:`The implied rate is now <b>${nf(FX31,4)}</b>, against 1.1556 in the previous snapshot — the dollar lost roughly 1.1%.`,
+ w:`On about €7,600 of dollar-priced holdings that is roughly <b>−€80</b>, taken out of your euro value without anything happening at any company.<br><br>
+ Visible in MP: the share fell 6.0% in dollars from your cost, but shows <b>−7.24%</b> in euros. The gap is the currency. This is the attribution the toolkit calculator was built for, and now you have two dated rates to feed it.`},
+{t:"The Patria dividend is confirmed — you kept the entitlement",c:"pos",pri:4,
+ b:`The account shows an upcoming payment of <b>$11.38 / €9.74</b> on 14 September: $0.1626 × 70 shares.`,
+ w:`This answers the open question from the sale. The record date on 10 August had passed before you sold on the 14th, so the entitlement stayed with you.<br><br>
+ Note the tax: as a US-listed dividend it is subject to 15% withholding at source and 30% Belgian withholding on the remainder, so roughly <b>€5.80</b> reaches you net of about €9.74 gross.`}
+];
+
+const SHORT31 = [
+{tk:"BBAI",si:"30.93%",dtc:"~1–3 days",trend:"rising",c:"neg",
+ mech:`Almost a third of the free float is sold short — one of the highest readings in the market. But days to cover is only one to three, meaning shorts can be flat in a session or two.`,
+ conn:`<b>Why that combination matters to you specifically:</b> a squeeze here is violent and brief, not durable. Any rally is likely to be forced buying that exhausts itself within days.<br><br>
+ And it connects directly to the share programme. The company may sell up to 100 million new shares at its discretion. <b>Shorts and the company are on the same side of the trade</b> — both supplying stock into strength. That is why the $3.50 level in your trigger sheet is where supply appears from two directions at once.`},
+{tk:"MP",si:"~19.2–19.6%",dtc:"~5 days",trend:"was falling with the rally",c:"gold",
+ mech:`About a fifth of the float short, but crucially it takes shorts around five days to cover at normal volume.`,
+ conn:`<b>This is the opposite shape to BigBear.ai, and it explains the last three weeks.</b> Shorts who cannot exit quickly must buy through a rising price for days, which is why a 58% move happened partly without company news — on the biggest day no rare-earth-specific news was confirmed at all.<br><br>
+ The chain: policy expectation → buying → shorts forced to cover over five days → more buying → the move extends beyond what the news justified. <b>The same mechanism runs in reverse.</b> If the expectation disappoints, there are no trapped shorts left to cushion the fall, because they already covered on the way up.<br><br>
+ One more point from the same period: insiders sold roughly $79.9 million of stock over three months. Shorts covering and insiders selling into the same rally is an unusual combination — it means the buying came from neither group.`},
+{tk:"3CP",si:"not comparable",dtc:"—",c:"mu",
+ mech:`Primary listing is Hong Kong; short reporting is not comparable to US data, and the euro quote is a secondary venue.`,
+ conn:`No squeeze mechanism to read here. What matters instead is the spread on the secondary quote, which is a hidden cost at a 33.8% weight.`},
+{tk:"VCIG",si:"not meaningful",dtc:"—",c:"mu",
+ mech:`At €7.29 of remaining value, no positioning statistic carries information.`,
+ conn:`The share count sets the price here, not buyers or sellers.`}
+];
+
+const SHORTHOW = [
+ ["Short interest % of float","How crowded the bearish side is.","Above 10% is high. Above 20% is a crowded trade that can reverse violently."],
+ ["Days to cover","Short interest divided by average daily volume — how long shorts need to exit.","<b>This is the number most people skip and it decides the shape of a squeeze.</b> Under 2 days: violent and over quickly. Over 5 days: slower, but it can run for weeks."],
+ ["The trend, not the level","Whether shorts are adding or covering since the previous report.","Rising short interest into a falling price is conviction. Falling short interest into a rising price is capitulation — and capitulation removes future buyers."],
+ ["Where the data comes from","Collected twice a month at settlement, published roughly eight business days later.","Always stale by up to three weeks. In a fast market the position can be entirely different by the time you read it."],
+ ["The trap","Treating a high number as bullish on its own.","Shorts are sometimes right. A fifth of the float short can simply mean a fifth of the market has done the work and disagrees with you."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ /* compress the archive on the start tab */
+ const c=$("#c-start");
+ if(c){
+  const heads=[...c.children].filter(e=>{const t=e.querySelector&&e.querySelector(".ctl");return t&&/^(ARCHIVE|SUPERSEDED)$/.test(t.textContent.trim());});
+  heads.forEach(h=>{
+   const holder=h.nextElementSibling;
+   if(holder&&holder.children.length>2){
+    holder.style.maxHeight="260px"; holder.style.overflow="hidden"; holder.style.position="relative";
+    const id="exp"+Math.random().toString(36).slice(2,7);
+    holder.id=id;
+    holder.insertAdjacentHTML("afterend",
+     `<div class="ctrl" style="margin-top:-6px"><button class="btn" onclick="var e=document.getElementById('${id}');if(e.style.maxHeight){e.style.maxHeight='';e.style.overflow='';this.textContent='collapse again';}else{e.style.maxHeight='260px';e.style.overflow='hidden';this.textContent='expand this section';}">expand this section</button>
+     <span class="mu" style="font-size:10.5px">collapsed to keep this page readable — the content is intact</span></div>`);
+   }
+  });
+ }
+
+ /* portfolio tab */
+ const p=$("#c-pf");
+ if(p)p.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>EXACT POSITION</b> · ${P31.ts.toUpperCase()}</div>
+ <div class="grid g4" style="margin-bottom:14px">
+  <div class="card"><div class="desk">ACCOUNT</div><div class="ctr" style="text-align:left;font-size:22px">${eur(P31.acc)}</div><div class="mu">day ${eur(P31.day)} (${nf(P31.dayPct,2)}%)</div></div>
+  <div class="card"><div class="desk">SHARES</div><div class="ctr" style="text-align:left;font-size:22px">${eur(P31.shares)}</div><div class="mu">four positions</div></div>
+  <div class="card"><div class="desk">CASH</div><div class="ctr pos" style="text-align:left;font-size:22px">${eur(P31.cash)}</div><div class="mu">${nf(P31.cash/P31.acc*100,1)}% of the account</div></div>
+  <div class="card"><div class="desk">UNREALISED</div><div class="ctr neg" style="text-align:left;font-size:22px">${eur(P31.pl)}</div><div class="mu">${pc(P31.pl/P31.cost*100)} on ${eur(P31.cost)} of cost</div></div>
+ </div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th>Company</th><th>Venue</th><th class="n">Price</th><th class="n">Average cost</th><th class="n">Shares</th><th class="n">Value</th><th class="n">Unrealised</th><th class="n">Weight</th></tr></thead><tbody>
+ ${P31.h.map(h=>`<tr class="wrap"><td><b>${h.tk}</b></td><td>${h.nm}</td><td class="mono tx2">${h.ex}</td>
+  <td class="n mono">${h.cur}${nf(h.px,h.px<1?4:2)}</td>
+  <td class="n mono ${h.tk=='MP'?'neg':''}"><b>${h.cur}${nf(h.gak,h.gak<1?4:2)}</b></td>
+  <td class="n mono">${nf(h.qty,0)}</td><td class="n mono">${eur(h.val)}</td>
+  <td class="n mono neg"><b>${eur(h.pl)}</b><div style="font-size:9px">${pc(h.plPct)}</div></td>
+  <td class="n mono">${nf(h.w,1)}%<div class="meter"><i style="width:${h.w/38*100}%;background:var(--acc)"></i></div></td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="note">Implied EUR/USD from these figures: <b>${nf(FX31,4)}</b>, derived from the dollar price times quantity against the euro value${SB('de')}. Every figure above is read directly from the account${SB('pf')}.</div>
+
+ <div class="sh"><b>FOUR THINGS THESE NUMBERS REVEAL</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${FIND31.map(f=>`<div class="card" style="border-color:${f.c=='neg'?'#e0c5c5':f.c=='pos'?'#c9e2d5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl" style="font-size:13px">${f.t}</div>
+   <span class="tag st ${f.c=='neg'?'neg':f.c=='pos'?'pos':'gold'}">${f.pri==1?'MOST IMPORTANT':'#'+f.pri}</span></div>
+  <div class="blk">${f.b}</div>
+  <div class="blk ${f.c=='neg'?'n':f.c=='pos'?'p':'g'}"><div class="h">What it means</div>${f.w}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>SHORT INTEREST</b> · who is betting against you, and how trapped they are</div>
+ <div class="lede">You asked for this to be more to the point but keep the connection visible. Each position below has the mechanism first, then the chain into your specific situation.</div>
+ <div class="grid g2" style="margin-bottom:12px">
+ ${SHORT31.map(s=>`<div class="card">
+  <div class="ct"><div class="ctl">${s.tk}</div>
+   <div style="text-align:right"><div class="mono ${s.c=='neg'?'neg':s.c=='gold'?'gold':'mu'}" style="font-size:17px"><b>${s.si}</b></div>
+   <div class="mu mono" style="font-size:9px">of float · ${s.dtc} to cover</div></div></div>
+  <div class="blk"><div class="h">The mechanism</div>${s.mech}${SB('fe')}</div>
+  <div class="blk ${s.c=='neg'?'n':s.c=='gold'?'g':'i'}"><div class="h">The connection to you</div>${s.conn}</div></div>`).join("")}
+ </div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:180px">What to read</th><th style="min-width:290px">What it measures</th><th style="min-width:420px">How to use it</th></tr></thead><tbody>
+ ${SHORTHOW.map(h=>`<tr class="wrap"><td class="mono gold"><b>${h[0]}</b></td><td class="tx2">${h[1]}</td><td>${h[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">The shortest summary of where you stand</div>
+ Four positions worth ${eur(P31.shares)}, all four in the red, ${eur(P31.pl)} unrealised. ${eur(P31.cash)} in cash — <b>${nf(P31.cash/P31.acc*100,1)}% of the account.</b><br><br>
+ The two largest are BigBear.ai at ${nf(P31.h[0].w,1)}% and Xiaomi at ${nf(P31.h[1].w,1)}%, together ${nf(P31.h[0].w+P31.h[1].w,1)}%. Xiaomi reports in three days in NVIDIA's shadow. MP's break-even is inside a named seller's zone.<br><br>
+ <b>Nothing here requires action today. One thing requires a decision before Monday closes:</b> what you want the Xiaomi weight to be on Tuesday morning.</div>`);
+
+ $("#stamps").innerHTML=[["PORTFOLIO","23 Aug 05:51 · exact","fresh"],
+  ["CASH",eur(P31.cash)+" · "+nf(P31.cash/P31.acc*100,1)+"%","fresh"],
+  ["DECIDE BY","Mon 25 Aug · Xiaomi weight","stale"],
+  ["VERSION","31.0 · 23 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v31 · 23 AUGUST";
+},4100);
+
+/* ═══════════ v32 — EXTERNAL EVENTS · NEWS ABOUT OTHER PEOPLE'S COMPANIES ═══════════ */
+
+const EXT = [
+{n:1,t:"A competitor or sector leader reports earnings",freq:"quarterly",
+ chain:"Peer reports → sector sentiment moves → your position moves without any company news",
+ q:"<b>Does the peer share your company's actual driver, or only its label?</b>",
+ h:{
+  BBAI:{d:"HIGH",c:"neg",w:"Palantir is the comparison company and grew revenue 93% against BigBear.ai's 13%. A strong Palantir quarter can lift BBAI on sentiment and simultaneously make the execution gap more visible. <b>Both effects are real and they point opposite ways.</b>"},
+  "3CP":{d:"VERY HIGH",c:"neg",w:"Reports in the same session as NVIDIA on 26 August. Asian trading prices NVIDIA first. <b>Your first hour of Xiaomi price action may be about someone else's company entirely.</b>"},
+  MP:{d:"MEDIUM",c:"gold",w:"USA Rare Earth and NioCorp move together with MP — on the biggest day of the rally they were +8.5% and +3%. So a peer result moves you, but through the sector, not the business."},
+  VCIG:{d:"NONE",c:"mu",w:"No peer group that means anything at this size."}}},
+
+{n:2,t:"A sector peer issues a recall or has a product failure",freq:"occasional",
+ chain:"Recall announced → is it a shared component or a company-specific fault? → sector regulation risk or competitive gain",
+ q:"<b>Is the fault in a part your company also uses, or in that company's own execution?</b> If it is shared, it is your problem. If not, a competitor in trouble can help you.",
+ h:{
+  "3CP":{d:"DEPENDS ENTIRELY",c:"gold",w:"A Tesla recall is the live example. Tesla is a competitor in China, not a supplier or customer. <b>It only reaches Xiaomi if a shared component is involved — batteries, driver-assistance software — or if the Chinese regulator responds by tightening rules for the whole EV sector.</b> A manufacturing fault in one Tesla model does not touch Xiaomi's vehicle margin, which is the one number that decides that position."},
+  BBAI:{d:"LOW",c:"mu",w:"Software and services rather than hardware. A peer's product failure is mostly reputational for the category."},
+  MP:{d:"LOW",c:"mu",w:"Upstream of finished products. A recall three steps downstream barely reaches the ore."},
+  VCIG:{d:"NONE",c:"mu",w:"—"}}},
+
+{n:3,t:"A regulator acts against a company in your sector",freq:"occasional",
+ chain:"Regulator opens an investigation or imposes a rule → whole sector reprices on the risk of the same treatment",
+ q:"<b>Is this about that company's conduct, or about a rule that will apply to everyone?</b> Conduct is contained. Rules are contagious.",
+ h:{
+  BBAI:{d:"MEDIUM",c:"gold",w:"Government AI procurement is politically sensitive. A scandal at any government AI supplier raises scrutiny across the category — and BigBear.ai's entire revenue base sits with one paymaster."},
+  "3CP":{d:"HIGH",c:"neg",w:"Chinese regulators have historically moved against whole sectors at once rather than single companies. That is the pattern that makes sector-level action a genuine risk here rather than a theoretical one."},
+  MP:{d:"LOW — AND INVERTED",c:"pos",w:"<b>Regulation of foreign competitors is the thesis.</b> Action against Chinese suppliers helps MP. This is the one holding where regulatory news in the sector is usually good news."},
+  VCIG:{d:"CRITICAL",c:"neg",w:"Already the live risk. Late annual report, exchange minimum-bid rules. Any regulatory action against similar late filers signals how strict enforcement is running."}}},
+
+{n:4,t:"A supplier or input source is disrupted",freq:"ongoing",
+ chain:"Supply disruption → input costs rise → margin compresses, unless the cost can be passed on",
+ q:"<b>Can your company raise its price, or does it absorb the cost?</b> That single question separates winners from losers in every supply shock.",
+ h:{
+  "3CP":{d:"HIGH",c:"neg",w:"<b>Xiaomi absorbs.</b> Consumer electronics is price-competitive, so input inflation lands in the margin rather than in the retail price. This is why the 27 November export controls hurt here — the inputs are exactly what China controls."},
+  MP:{d:"INVERTED",c:"pos",w:"<b>MP is the supply.</b> Disruption elsewhere raises what MP can charge, and the government price floor means the downside is capped anyway."},
+  BBAI:{d:"LOW",c:"mu",w:"Software business, minimal physical inputs. Data-centre costs matter, but indirectly."},
+  VCIG:{d:"NONE",c:"mu",w:"—"}}},
+
+{n:5,t:"A government changes rules — tariffs, export controls, subsidies",freq:"frequent in 2026",
+ chain:"Measure with an effective date → winner and loser named → repricing on the announcement, not on the date",
+ q:"<b>Who is named on each side?</b> A measure with only winners has not been thought through.",
+ h:{
+  MP:{d:"VERY HIGH — POSITIVE",c:"pos",w:"27 November export controls, the $3bn critical minerals commitment, the government equity stake and price guarantee. <b>This is the entire thesis.</b>"},
+  "3CP":{d:"VERY HIGH — NEGATIVE",c:"neg",w:"The mirror image of MP. Chinese tightening raises input costs and retaliation risk. <b>You own both sides of the same decision, net short by about five points.</b>"},
+  BBAI:{d:"MEDIUM — POSITIVE",c:"gold",w:"Defence budgets above $500bn and the drone orders support the category. But policy has never been the driver here — the share count is."},
+  VCIG:{d:"NONE",c:"mu",w:"—"}}},
+
+{n:6,t:"A peer raises capital or announces a share programme",freq:"occasional",
+ chain:"Peer dilutes → investors reassess how the whole category is funded → your company is repriced on the same suspicion",
+ q:"<b>Is your company funded the same way?</b> If yes, this is a preview. If no, it is a relative advantage.",
+ h:{
+  BBAI:{d:"VERY HIGH",c:"neg",w:"<b>Read this both ways.</b> When a peer dilutes, the category is repriced — and BigBear.ai is the one with an authorisation for up to 100 million shares. Conversely, when peers fund themselves through revenue, the contrast is unflattering."},
+  VCIG:{d:"HIGH",c:"neg",w:"The dilution pair. Any category-wide loss of appetite for share-issuing microcaps hits here first."},
+  MP:{d:"MEDIUM",c:"gold",w:"Capital spending of $307.7m in the first half has to be funded somehow. If peers start raising equity, the question gets asked of MP too."},
+  "3CP":{d:"LOW",c:"mu",w:"Large enough to fund from operations."}}},
+
+{n:7,t:"A government contract is awarded to a competitor",freq:"quarterly",
+ chain:"Competitor wins → the addressable pool shrinks → your backlog growth assumption weakens",
+ q:"<b>Was this a contract your company bid for?</b> A loss on a bid is information. A win in an adjacent area is noise.",
+ h:{
+  BBAI:{d:"HIGH",c:"neg",w:"Backlog of $269.6m and more than 20 wins per quarter is the whole model. <b>The trigger sheet already says: below roughly ten wins a quarter, annual guidance becomes unreachable.</b> A competitor taking share is how that happens."},
+  MP:{d:"MEDIUM",c:"gold",w:"The aerospace and defence supply contract is a real asset. A competitor winning the next one would matter."},
+  "3CP":{d:"NONE",c:"mu",w:"Consumer business."},VCIG:{d:"NONE",c:"mu",w:"—"}}},
+
+{n:8,t:"The underlying commodity price moves sharply",freq:"daily",
+ chain:"Commodity moves → miner revenue moves → but only if the company sells at spot rather than under contract",
+ q:"<b>Is your company exposed to the spot price, or contracted?</b> This is gate 5 applied to commodities.",
+ h:{
+  MP:{d:"HIGH — BUT CAPPED BOTH WAYS",c:"gold",w:"Realised pricing in the high $90s per kilogram, <b>with a government price floor underneath.</b> That floor is protection on the way down and a reminder on the way up that this is not a pure commodity play. Q2 support income was still about 62% of adjusted profit."},
+  "3CP":{d:"MEDIUM — INVERTED",c:"neg",w:"As a buyer of materials, rising commodity prices are a cost, not a revenue."},
+  BBAI:{d:"NONE",c:"mu",w:"—"},VCIG:{d:"NONE",c:"mu",w:"—"}}},
+
+{n:9,t:"A short-seller publishes a report on a sector peer",freq:"occasional",
+ chain:"Report published → the whole category is re-examined on the same accusation → companies with the same weakness fall hardest",
+ q:"<b>Does the accusation apply to your company too?</b> Read the argument, not the target.",
+ h:{
+  BBAI:{d:"HIGH",c:"neg",w:"30.93% of the float is already short. A credible report on any AI-adjacent name with heavy issuance invites the same treatment here."},
+  VCIG:{d:"HIGH",c:"neg",w:"Late filings are exactly what such reports target."},
+  MP:{d:"MEDIUM",c:"gold",w:"About 19% of the float short and roughly five days to cover. A report on a mining peer would find willing readers."},
+  "3CP":{d:"LOW",c:"mu",w:"Hong Kong listing, less exposed to this pattern."}}},
+
+{n:10,t:"The dollar moves",freq:"continuous",
+ chain:"Currency moves → your euro value changes → nothing happened at any company",
+ q:"<b>None — this hits everything you own.</b> 100% of your shares are dollar-priced or dollar-pegged.",
+ h:{
+  ALL:{d:"UNIVERSAL",c:"neg",w:"The rate moved from 1.1556 to <b>1.1679</b> since the last snapshot, costing roughly €80. Visible in MP: down 6.0% in dollars from your cost, but <b>−7.24%</b> in euros. The gap is entirely the currency. Every 1% is worth about €115 to you."}}}
+];
+
+const EXTRULE = [
+ ["Step 1 — name the mechanism","Can you draw the line from the headline to the one number on your position card? If not, stop here. It is noise, however dramatic.","g"],
+ ["Step 2 — check the direction","Half of these events help one holding and hurt another. MP and Xiaomi respond oppositely to the same policy news, so 'bad for the sector' is meaningless without asking which sector.","i"],
+ ["Step 3 — separate conduct from rules","A company in trouble for its own behaviour is contained. A new rule applies to everyone. This distinction alone resolves most regulatory headlines.","p"],
+ ["Step 4 — ask who absorbs","In any cost shock, someone passes it on and someone absorbs it. Xiaomi absorbs, MP passes on. That determines the sign before you know the size.","g"],
+ ["Step 5 — wait an hour","On event days the first move often prices someone else's company. 26 August is the clearest example you will get.","n"]
+];
+
+const POLTRADE = [
+ ["What is disclosed","Members of Congress and their spouses must report transactions above $1,000 within 45 days under the STOCK Act. The president files annual financial disclosures plus periodic reports.","ct"],
+ ["Why it is limited","<b>A 45-day delay</b> means you read it after the market has traded it. Amounts are reported in wide bands rather than exact figures. And much is held through trusts and funds where individual positions are not visible.","neg"],
+ ["What is actually useful","<b>Committee membership.</b> A member of the armed services committee buying defence shares before a budget vote is a signal with a date attached. Free trackers aggregate these filings.","pos"],
+ ["Where it fits your system","As a variant of gate 3: not a company insider, but someone with an information advantage about <b>policy</b>. Given that your entire screen is built on policy with a date, this is a closer fit than it first appears.","gold"],
+ ["Which holding it matters most for","<b>MP, by a distance.</b> The government is simultaneously customer, shareholder and price-setter. Nowhere else in your book does political information map so directly onto a share price.","gold"],
+ ["What it will not tell you","Anything about BigBear.ai's share count, Xiaomi's vehicle margin, or VCI Global's missing annual report — the three numbers that actually decide those positions.","mu"]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const r=$("#c-riv"); if(!r)return;
+ r.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>EXTERNAL EVENTS</b> · NEWS ABOUT OTHER PEOPLE'S COMPANIES</div>
+ <div class="lede">You have rules for news <b>about</b> your companies. This is the missing half: news about someone else's company that reaches you anyway. Ten event types, each with the transmission chain, the one question that decides whether it touches you, and the specific effect on each of your four positions.</div>
+
+ <div class="card" style="margin-bottom:14px">
+  <div class="ctl" style="font-size:13px;margin-bottom:8px">Five steps for any external headline</div>
+  ${EXTRULE.map((s,i)=>`<div class="blk ${s[2]}"><div class="h">${s[0]}</div>${s[1]}</div>`).join("")}
+ </div>
+
+ ${EXT.map(e=>`<div class="card" style="margin-bottom:12px">
+  <div class="ct"><div class="ctl" style="font-size:13.5px">${e.n} · ${e.t}</div>
+   <span class="tag st">${e.freq}</span></div>
+  <div class="mech" style="font-size:10.5px">${e.chain}</div>
+  <div class="blk g"><div class="h">The question that decides it</div>${e.q}</div>
+  <div class="tw"><table><thead><tr><th style="width:90px">Position</th><th style="width:170px">Exposure</th><th style="min-width:520px">Why, specifically</th></tr></thead><tbody>
+  ${Object.keys(e.h).map(k=>`<tr class="wrap"><td><b class="${k=="ALL"?'gold':''}">${k=="ALL"?"ALL FOUR":k}</b></td>
+   <td><span class="tag st ${e.h[k].c}">${e.h[k].d}</span></td><td>${e.h[k].w}</td></tr>`).join("")}
+  </tbody></table></div></div>`).join("")}
+
+ <div class="warn goldbox"><div class="h">The pattern across all ten</div>
+ Look at how often MP and Xiaomi appear on <b>opposite sides of the same row</b> — policy, supply disruption, commodity moves, regulation. That is not coincidence. One sells the material, the other buys it; one benefits from Western restriction, the other from Chinese openness.<br><br>
+ It means most sector headlines are not "good" or "bad" for your portfolio. <b>They are good for 29% and bad for 34% of it</b> — and the net is against you by roughly five points. Before reacting to any policy headline, work out which of your two positions is on which side.</div>
+
+ <div class="sh"><b>POLITICAL TRADING DISCLOSURES</b> · what is knowable</div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${POLTRADE.map(p=>`<tr class="wrap"><td class="mono ${p[2]=='neg'?'neg':p[2]=='pos'?'pos':p[2]=='gold'?'gold':'mu'}" style="width:230px;vertical-align:top"><b>${p[0]}</b></td>
+  <td>${p[1]}${SB(p[2]=='ct'?'ct':'de')}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="warn"><div class="h">Honest limit</div>
+ This layer tells you what politicians <b>bought</b>, weeks after they bought it. It does not tell you what they will do next, which is the thing that actually moves MP. The policy register in the pipeline tab remains the stronger tool: it tracks measures with effective dates rather than trades with a 45-day lag.<br><br>
+ Worth checking quarterly rather than daily. If a cluster of committee members buys into a sector you hold, that is worth an hour. A single filing is not.</div>
+ <div style="height:20px"></div>`);
+
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v32 · EXTERNAL EVENTS";
+},4300);
+
 </script>
 </body>
 </html>
