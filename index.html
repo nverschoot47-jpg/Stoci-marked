@@ -4879,6 +4879,854 @@ setTimeout(()=>{
  document.querySelector(".logo span").textContent="CONTROL ROOM · v32 · EXTERNAL EVENTS";
 },4300);
 
+/* ═══════════ v33 — MONDAY 24 AUGUST · THE DEBASEMENT WEEK ═══════════ */
+
+const D24 = {
+ h:"Gold at a three-month high while oil falls and equities slip — three different stories, not one",
+ lead:`Your screen shows gold up, oil down and the index down. That combination looks contradictory but it is not: <b>each is being driven by something different, and only one of the three is about the Middle East.</b>`,
+ rows:[
+  ["MGC1! gold","4,704.8","+0.52%",1,"Spot gold reached <b>$4,627.42</b>, the highest since 15 May, with futures at $4,683.80. Prices gained more than 5% last week and are up roughly <b>10% in August</b> from near $4,000 — the best month since January."],
+  ["MCL1! oil","85.21","−2.12%",-1,"<b>Profit-taking, not peace.</b> Oil rose for six consecutive sessions on the sanctions threat, then slipped more than $1 as investors took profits ahead of today's announcement."],
+  ["MNQ1! Nasdaq 100","29,202.50","−0.63%",-1,"Last week the Nasdaq fell 2% and the S&P 1.4%, snapping three-week winning streaks. The semiconductor index fell about <b>5%</b> on rising yields."],
+  ["SIL1! silver","69.130","−0.58%",-1,"<b>Well above the $64 resistance in this dashboard</b>, which was built on $60.25. That level is now history. Note the context: silver peaked near $121 in January and has shed nearly half."],
+  ["GER40","26,081.80","−0.17%",-1,"Holding up better than the Nasdaq, as the composition argument predicts."],
+  ["UK100","10,816.95","+0.05%",1,"The only one green. Energy weighting cushions a soft tape."]
+ ]};
+
+const D24W = [
+{t:"Gold is no longer trading the oil link — it is trading the debt",c:"gold",pri:1,
+ b:`The Treasury's decision to at least double buybacks of 10 to 30-year debt lit what analysts are calling a <b>debasement trade</b>: gold and bitcoin to fresh highs, the dollar lower. The reasoning is that lower borrowing costs reduce the opportunity cost of holding metals that pay no coupon, while the looming deficit raises doubts about the currency itself.<br><br>
+ One number underneath it: the budget office projects net interest payments of roughly <b>$1.0 trillion this fiscal year</b> — matching the base defence appropriation for the first time. Every 25 basis point rise adds tens of billions to that.`,
+ w:`<b>This changes Engine 1 in your dashboard.</b> The mechanism said: oil down → inflation expectation down → gold up. Today oil fell and gold rose, which fits. But the actual driver is fiscal, not energy — and that is a different engine entirely.<br><br>
+ The supporting evidence is physical: central banks bought <b>288.9 tonnes</b> in the second quarter, up 62% year on year and the strongest second quarter on record — buying into a quarter when prices were falling. Price-insensitive, policy-driven demand.<br><br>
+ Practical consequence: your gold levels are obsolete. Resistance was $4,520 and support $3,975. Spot is $4,627. <b>Both were passed without the dashboard registering it.</b>`},
+{t:"Today is the Iran sanctions announcement",c:"neg",pri:2,
+ b:`The US threatened Iran with what it called <b>"the greatest financial offensive ever marshalled"</b>, with sanctions targeting Iran's <b>trade partners</b> rather than Iran alone. Details are unveiled today.`,
+ w:`The weekend chain in this dashboard said: if the measures reach Chinese banks, US–China relations worsen and the probability attached to 27 November rises. <b>"Targeting trade partners" is precisely that construction.</b><br><br>
+ Oil falling today is not disagreement — it is positioning. Six sessions up, then profit-taking into the event. What matters is what the announcement contains, not what oil did before it.`},
+{t:"Korea fell 3.47% — and that is your read-across for Wednesday",c:"neg",pri:3,
+ b:`The Kospi dropped <b>3.47%</b> overnight while Japan's Nikkei fell 0.57%.`,
+ w:`The Korean index is roughly half memory chips. This dashboard has called it the cleanest real-time proxy for global chip sentiment for exactly this reason.<br><br>
+ <b>A 3.47% fall two days before NVIDIA reports is a signal, and it lands on 99.9% of your shares.</b> Xiaomi reports in the same session. The Philadelphia semiconductor index already fell about 5% last week on yields.<br><br>
+ It does not predict the result. It tells you the market is de-risking the trade beforehand — which is exactly when the bar argument bites hardest.`},
+{t:"Wednesday pairs hot inflation with slowing growth",c:"neg",pri:4,
+ b:`Core PCE — the Fed's preferred inflation measure — is forecast to <b>accelerate to 0.3%</b> on the same day that second-quarter GDP is revised <b>lower</b>. Both land Wednesday, alongside NVIDIA.`,
+ w:`<b>This is the exact pairing you asked about last week.</b> Rising inflation with slowing growth is the stagflation combination, and Wednesday is the first time both appear in the same print.<br><br>
+ Remember why it is a trap: hot inflation argues for a hike, slow growth argues against. There is no rate that solves both. And for you the two halves cancel — lower rate odds help your 72.6% rate-negative book, while lower growth cuts the earnings those valuations rest on.`},
+{t:"Friday is Warsh's first Jackson Hole speech",c:"gold",pri:5,
+ b:`Analysts describe it as a <b>two-way risk with nothing to anchor on</b>, because he has no policy record and has refused forward guidance since taking office. The 30-year sits at 5.273% and refused to fall even after the buyback announcement.`,
+ w:`If he leans dovish and signals a hike is not coming, equities rally, yields fall and gold catches a bid — and small companies benefit most, which is what you own. If he stays noncommittal, the three dissenting votes become the actual signal.<br><br>
+ <b>Four events in three days:</b> sanctions today, PCE and GDP and NVIDIA on Wednesday, Warsh on Friday. That is the crowded calendar the volatility index at 14–15 was not pricing.`}
+];
+
+const D24DEC = [
+ ["Xiaomi weight before tomorrow closes","33.8% of your shares, reporting in NVIDIA's shadow, with Korea down 3.47% overnight.","<b>This is the decision. Today or tomorrow, not Wednesday morning.</b>"],
+ ["Deploying cash this week","€8,297.86 sits ready. Four events in three days.","The dashboard has said not to deploy into 26 August since the first week-ahead note. Nothing today argues against that."],
+ ["MP at $60.05","Your cost is $63.90 — inside the seller's band. The sanctions announcement today could move the whole critical-minerals complex.","No action needed. But if it runs towards $64, that is your break-even and his selling zone at the same price."],
+ ["Gold levels obsolete","Support $3,975 and resistance $4,520 were both passed.","Not a position, but the dashboard was carrying levels that no longer describe anything. Now flagged."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>MONDAY 24 AUGUST</b> · TODAY EXPLAINED</div>
+ <div class="card hl" style="margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${D24.h}</div>
+   <div class="mono mu" style="font-size:9px;text-align:right">VERIFIED BEFORE WRITING${SB('ct','LIVE')}</div></div>
+  <div class="lede" style="margin-bottom:10px">${D24.lead}</div>
+  <div class="tw"><table><thead><tr><th>Instrument</th><th class="n">Your screen</th><th class="n">Change</th><th style="min-width:500px">What is actually driving it</th></tr></thead><tbody>
+  ${D24.rows.map(r=>`<tr class="wrap"><td><b>${r[0]}</b></td><td class="n mono">${r[1]}</td>
+   <td class="n mono ${r[3]>0?'pos':'neg'}">${r[2]}</td><td class="tx2">${r[4]}</td></tr>`).join("")}
+  </tbody></table></div>
+ </div>
+
+ <div class="sh"><b>FIVE THINGS BEHIND IT</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${D24W.map(x=>`<div class="card" style="border-color:${x.c=='neg'?'#e0c5c5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl" style="font-size:13px">${x.t}</div>
+   <span class="tag st ${x.c=='neg'?'neg':'gold'}">${x.pri==1?'BIGGEST SHIFT':'#'+x.pri}</span></div>
+  <div class="blk">${x.b}${SB('ct')}</div>
+  <div class="blk ${x.c=='neg'?'n':'g'}"><div class="h">What it means for you</div>${x.w}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>WHAT NEEDS DECIDING</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:230px">Decision</th><th style="min-width:400px">Situation</th><th style="min-width:330px">Reading</th></tr></thead><tbody>
+ ${D24DEC.map(x=>`<tr class="wrap"><td><b>${x[0]}</b></td><td>${x[1]}</td><td>${x[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">The week in one line</div>
+ Gold has stopped trading the war and started trading the debt. Oil is positioning, not peace. Korea just told you what the chip market thinks two days before NVIDIA. And Wednesday pairs accelerating inflation with slowing growth for the first time.<br><br>
+ <b>You hold 41.8% cash into four events in three days.</b> That is the position that works this week — provided you do not spend it before Friday.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["MARKET","24 Aug · gold 3-month high","fresh"],
+  ["THIS WEEK","sanctions · PCE · NVIDIA · Warsh","fresh"],
+  ["DECIDE BY","tomorrow close · Xiaomi weight","stale"],
+  ["VERSION","33.0 · 24 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v33 · 24 AUGUST";
+},4500);
+
+/* ═══════════ v34 — WEDNESDAY 26 AUGUST · THE DAY ═══════════ */
+
+const D26 = {
+ h:"The market read the sanctions as de-escalation, oil fell more than 3%, and Hormuz reopening talks are suddenly live",
+ lead:`Three days that went almost entirely against the way this dashboard framed them. That is worth saying plainly before anything else.`,
+ seq:[
+  ["Mon 24 Aug","Sanctions unveiled — \"Operation Economic Outcast\"","Nasdaq Composite <b>−0.76%</b>, tech dumped, NVIDIA fell for a seventh straight session ahead of earnings.","neg"],
+  ["Tue 25 Aug","Oil collapsed more than 3% to a one-week low","<b>Traders shrugged off the sanctions</b>, viewing economic pressure as posing less risk to oil supply than military escalation. Brent settled below $90. Stocks rose, yields fell, NVIDIA +2% snapping its losing streak, Nasdaq 100 outperformed.","pos"],
+  ["Wed 26 Aug","PCE showed sticky inflation","A mild upside inflation surprise alongside relative economic strength. S&P roughly flat, Nasdaq Composite <b>−0.2%</b>, Dow −128 points. Yields little changed. <b>NVIDIA and Xiaomi report after the close.</b>","gold"]
+ ]};
+
+const D26F = [
+{t:"The Iran-to-China chain did NOT fire — report this honestly",c:"pos",pri:1,
+ b:`The weekend update built a chain: sanctions reach Chinese banks → US–China relations worsen → the probability attached to 27 November rises → your net short position gets worse.<br><br>
+ <b>Bessent explicitly declined to go there.</b> Asked whether Chinese banks could be targeted, he said only that "no one is above the reach of US sanctions" — and separately, when pressed on a timeline for secondary sanctions on Iran's biggest trade partners including China, he answered: <b>"Why would I want to blow up the global financial system?"</b> He did not name China in his prepared remarks at all.`,
+ w:`The measures target shipping, oil, crypto, gold and aviation — not the banking system. Analysts are sceptical the administration will act hard against China, particularly ahead of an expected visit by Xi Jinping.<br><br>
+ <b>What this means for you:</b> the escalation route into your 27 November exposure is on hold, not removed. One analyst reading is that Beijing will not push back publicly but will "quietly step up compliance" among state banks and oil companies to avoid the net — a dichotomy between official statement and private practice.<br><br>
+ <b>And the discipline point:</b> the dashboard raised a probability that did not materialise. That is the third conclusion in two weeks that reality has declined to confirm. Worth registering rather than quietly moving on.`},
+{t:"Hormuz reopening talks are live — the low-probability branch just activated",c:"gold",pri:2,
+ b:`Brent settled <b>below $90</b> on hopes of a revival of energy flows through the Strait, with <b>Iran and Oman discussing an interim framework</b>. Oil fell more than 3% to a one-week low.`,
+ w:`This dashboard has said for two weeks: treat reopening as a low-probability, high-payout option, not the base case. <b>That option is now in play.</b><br><br>
+ But hold the discipline from your own rules: <b>ship counts beat statements.</b> On 10 August one side said the Strait was open while traffic showed eight vessels against a pre-war 120. A negotiating framework is not transits. The tripwire remains what it was — transits back above roughly 60 a day.<br><br>
+ If it does reopen, the effects run through your book indirectly: cheaper oil helps German industry, hurts the UK index, and removes the energy-inflation channel that keeps the rate rise alive.`},
+{t:"The sanctions were read as LESS risky than war — the opposite of the framing",c:"neg",pri:3,
+ b:`Traders viewed <b>economic pressure as posing less risk to oil supplies than military escalation</b>. So an announcement billed as "an economic D-Day" and "the greatest financial offensive ever marshalled" sent oil down more than 3%.`,
+ w:`This is a lesson worth keeping. The dashboard treated a maximal-sounding threat as an escalation risk. The market treated it as a substitution — <b>sanctions instead of bombs.</b><br><br>
+ The same logic explains the market's calm: Washington choosing financial tools over military ones lowers the probability of the thing that actually closes shipping lanes.`},
+{t:"Inflation is sticky, but growth held up — not the stagflation pairing",c:"gold",pri:4,
+ b:`The PCE report showed <b>a mild upside inflation surprise alongside relative economic strength</b>. One market comment: that combination was not what investors, or the Fed, wanted to see.`,
+ w:`Last week's forecast was hot inflation with a downward GDP revision — the stagflation pairing. <b>What arrived was hot inflation with resilient growth</b>, which is a different problem: it removes the excuse not to hike.<br><br>
+ For your book that is the wrong half. Sticky inflation plus decent growth is the combination that keeps the September or October rise alive — and 72.6% of your shares are rate-negative with nothing on the other side.`},
+{t:"Two things nobody is watching that touch you",c:"inf",pri:5,
+ b:`<b>Canada retaliated.</b> New Canadian tariffs on US goods followed the 50% measure of 19 August. Markets brushed it aside.<br><br>
+ <b>The Treasury may fund buybacks from its $1 trillion General Account.</b> Yields dipped on the report.`,
+ w:`The first is your policy register working: a measure with a date produced a counter-measure, and the loser side is exactly what the register said it would be.<br><br>
+ The second matters for gold. The debasement trade is being fed by the funding mechanism, not just the buyback size. One large bank now recommends a mid-single-digit allocation to gold specifically as a hedge against financial repression fuelling currency debasement fears.`}
+];
+
+const D26NOW = [
+ ["Xiaomi reports tonight","33.8% of your shares, same session as NVIDIA, which rose 2% into the print after seven down days.","<b>The decision window has closed.</b> Whatever your weight is now is your weight through the result."],
+ ["NVIDIA after the close","The chip cluster is 99.9% of your shares. Korea fell 3.47% on Monday, then chipmakers rebounded Tuesday.","Do not act in the first hour tomorrow. Asian trading prices NVIDIA first and Xiaomi second."],
+ ["Oil below $90 and falling","Removes the inflation channel that keeps the hike alive — helpful for your rate exposure.","But PCE was sticky anyway, so the relief is partial."],
+ ["Warsh speaks Friday","No policy record, no forward guidance, three dissenting votes behind him.","The last event of the week and the only one that can reprice the whole rate path."],
+ ["Your cash","€8,297.86, untouched through four events.","Two down, two to go. The argument for holding it was NVIDIA and Warsh — both are still ahead."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>WEDNESDAY 26 AUGUST</b> · THE DAY</div>
+ <div class="card hl" style="margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${D26.h}</div>
+   <div class="mono mu" style="font-size:9px;text-align:right">VERIFIED${SB('ct','LIVE')}</div></div>
+  <div class="lede" style="margin-bottom:10px">${D26.lead}</div>
+  <div class="tw"><table><thead><tr><th style="width:110px">Day</th><th style="min-width:250px">What happened</th><th style="min-width:520px">Detail</th></tr></thead><tbody>
+  ${D26.seq.map(r=>`<tr class="wrap"><td class="mono gold"><b>${r[0]}</b></td>
+   <td class="${r[3]=='neg'?'neg':r[3]=='pos'?'pos':'gold'}"><b>${r[1]}</b></td><td class="tx2">${r[2]}</td></tr>`).join("")}
+  </tbody></table></div>
+ </div>
+
+ <div class="sh"><b>FIVE THINGS, AND THE FIRST IS A CORRECTION</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${D26F.map(x=>`<div class="card" style="border-color:${x.c=='neg'?'#e0c5c5':x.c=='pos'?'#c9e2d5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl" style="font-size:13px">${x.t}</div>
+   <span class="tag st ${x.c=='neg'?'neg':x.c=='pos'?'pos':x.c=='inf'?'inf':'gold'}">${x.pri==1?'DID NOT HAPPEN':'#'+x.pri}</span></div>
+  <div class="blk">${x.b}${SB('ct')}</div>
+  <div class="blk ${x.c=='neg'?'n':x.c=='pos'?'p':'g'}"><div class="h">What it means for you</div>${x.w}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>WHERE THAT LEAVES TODAY</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:200px">Item</th><th style="min-width:400px">Situation</th><th style="min-width:330px">Reading</th></tr></thead><tbody>
+ ${D26NOW.map(x=>`<tr class="wrap"><td><b>${x[0]}</b></td><td>${x[1]}</td><td>${x[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">The uncomfortable and useful summary</div>
+ This dashboard framed the sanctions as an escalation risk. <b>The market read them as a substitute for war and sold oil more than 3%.</b> It framed Chinese banks as the transmission route into your 27 November exposure, and the Treasury Secretary explicitly declined to go there. It expected stagflation on Wednesday and got sticky inflation with resilient growth instead.<br><br>
+ Three framings, three outcomes that did not match. <b>None of them cost you anything, because you took no action on any of them</b> — which is the argument for written triggers rather than narrative reactions.<br><br>
+ What did not change: 99.9% of your shares in one cycle, reporting tonight. That was the real risk all along, and it is the one thing the week never disputed.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["MARKET","26 Aug · oil below $90","fresh"],
+  ["TONIGHT","NVIDIA + Xiaomi after close","stale"],
+  ["FRIDAY","Warsh at Jackson Hole","stale"],
+  ["VERSION","34.0 · 26 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v34 · 26 AUGUST";
+},4700);
+
+
+
+/* ═══════════ v35 — NVIDIA REPORTED · 26 AUGUST ═══════════ */
+
+const NV = {
+ h:"NVIDIA beat — and the valuation is the surprise, not the numbers",
+ nums:[
+  ["Earnings per share","$2.22","consensus $2.09","<b>More than double</b> the $1.05 a year earlier. A clear beat.","pos"],
+  ["Revenue consensus","$92.07bn","company guidance $91bn ±2%","Roughly 95% year-on-year growth if guidance was met. Guidance explicitly excluded any China data-centre revenue.","pos"],
+  ["Price into the print","$214.72 on 21 Aug","record above $236 in May","About 8% below the high, still up roughly 16% for the year.","gold"],
+  ["Forward earnings multiple","~25×","was near 40× in Aug 2024 and Aug 2025","<b>The lowest valuation since 2019, while profits doubled.</b> This is the opposite of the bubble framing.","pos"],
+  ["The run into it","seven straight down days","longest losing streak since 2022","Then +2.19% on Tuesday. The market de-risked hard beforehand.","gold"]
+ ]};
+
+const NVBAR = {
+ t:"The bar argument, tested in public",
+ b:`Engine 5 in this dashboard says: find out where the bar is, not just what the number will be. Here is what that looked like in advance.<br><br>
+ <b>Against it:</b> shares fell after six of the previous eight reports, including the last four in a row. Not because the numbers were bad — because expectations were harder to beat than the analysts' published estimate. And the margin by which NVIDIA beats its own guidance has been shrinking over the years.<br><br>
+ <b>For it:</b> at roughly 25 times forward earnings the shares entered this print far cheaper than the 35–40 times of the two previous Augusts. When the bar is lower, a beat has somewhere to go.`,
+ w:`This is the cleanest live test of the bar argument you will get. In August 2024 and 2025 the shares were expensive and fell on good numbers. This time they were cheap by their own standards and beat again.<br><br>
+ <b>If the shares still fall, the bar argument survives in its strongest form:</b> even a cheap price plus a doubling of profit is not enough when growth of nearly 100% is already assumed. If they rise, the explanation is that seven down days did the de-risking in advance.`
+};
+
+const NVYOU = [
+ ["Your exposure","99.9% of your shares sit in the chip cluster — BigBear.ai, Xiaomi and MP — without owning a single semiconductor company.","The read-across is sentiment and capital-spending expectations, not revenue."],
+ ["Xiaomi","Reported in the same session. <b>I do not yet have verified figures or the price reaction.</b>","At 33.8% of your shares this is the number that matters more to you than NVIDIA's does."],
+ ["What not to do","Asian trading prices NVIDIA first and Xiaomi second.","<b>Do not act in the first hour.</b> The opening move in Xiaomi may be about someone else's company entirely."],
+ ["What is still ahead","Warsh speaks at Jackson Hole on Friday.","The last event of the week, and the only one that can reprice the whole rate path. Your cash argument runs to Friday, not to tonight."]
+];
+
+const NVOPEN = [
+ ["The share price reaction","Results landed after the close. I have the earnings figure but not the move.","Check it yourself before drawing any conclusion — and note which way it went, because it settles the bar question."],
+ ["Xiaomi's actual numbers","Vehicle margin against the phone revenue decline is the one number that decides that position.","Above 25% margin with narrowing losses is the good case. Below 20% while phones shrink is your written exit condition."],
+ ["Revenue versus the $92.07bn consensus","I have the earnings beat confirmed but not the revenue line.","Both matter, but guidance for next quarter usually matters more than either."],
+ ["Any comment on China","Guidance excluded China data-centre revenue entirely.","Any hint of that market reopening is the single largest swing factor in the release, and it touches your 27 November exposure too."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>NVIDIA REPORTED</b> · WEDNESDAY 26 AUGUST, AFTER THE CLOSE</div>
+ <div class="card hl" style="margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${NV.h}</div>
+   <span class="tag st gold">REACTION NOT YET VERIFIED</span></div>
+  <div class="tw"><table><thead><tr><th>Metric</th><th class="n">Reported / actual</th><th class="n">Context</th><th style="min-width:440px">Reading</th></tr></thead><tbody>
+  ${NV.nums.map(n=>`<tr class="wrap"><td><b>${n[0]}</b></td><td class="n mono ${n[4]}"><b>${n[1]}</b></td>
+   <td class="n mono tx2">${n[2]}</td><td>${n[3]}${SB('co')}</td></tr>`).join("")}
+  </tbody></table></div>
+ </div>
+
+ <div class="card" style="margin-bottom:14px">
+  <div class="ctl" style="font-size:14px;margin-bottom:8px">${NVBAR.t}</div>
+  <div class="blk i">${NVBAR.b}${SB('ct')}</div>
+  <div class="blk g"><div class="h">Why this is the test</div>${NVBAR.w}</div>
+ </div>
+
+ <div class="sh"><b>WHAT IT MEANS FOR YOU</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:170px">Item</th><th style="min-width:430px">Situation</th><th style="min-width:330px">Reading</th></tr></thead><tbody>
+ ${NVYOU.map(x=>`<tr class="wrap"><td><b>${x[0]}</b></td><td>${x[1]}</td><td>${x[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>FOUR THINGS I COULD NOT VERIFY</b></div>
+ <div class="warn"><div class="h">Stated openly rather than filled in</div>
+ <div class="tw" style="margin:8px 0"><table><tbody>
+ ${NVOPEN.map(x=>`<tr class="wrap"><td class="mono gold" style="width:230px;vertical-align:top"><b>${x[0]}</b></td>
+  <td>${x[1]}<div class="tx2" style="margin-top:3px">${x[2]}</div></td></tr>`).join("")}
+ </tbody></table></div>
+ A gap you can see is useful. These four are the difference between knowing what happened and knowing what it meant.</div>
+
+ <div class="warn goldbox"><div class="h">The one genuinely interesting fact</div>
+ NVIDIA entered this report at roughly <b>25 times forward earnings — the lowest since 2019 — while its profits doubled.</b> In August 2024 and August 2025 it traded near 40 times and fell on good numbers both times.<br><br>
+ That is worth holding onto regardless of tonight's move, because it cuts against the story most people are telling. <b>The most-watched AI company is cheaper on earnings than it has been in seven years.</b> Whether that is an opportunity or a signal that the market doubts those earnings persist is the actual debate — and it is a more useful one than arguing about whether there is a bubble.<br><br>
+ For you it lands on 99.9% of your shares, none of which is a chip company.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["NVIDIA","EPS $2.22 vs $2.09 · beat","fresh"],
+  ["OPEN","reaction + Xiaomi figures","stale"],
+  ["FRIDAY","Warsh at Jackson Hole","stale"],
+  ["VERSION","35.0 · 26 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v35 · NVIDIA REPORTED";
+},4900);
+
+
+
+/* ═══════════ v36 — FRIDAY 28 AUGUST · THE TRIPWIRE FIRED ═══════════ */
+
+const D28 = {
+ h:"Hormuz flows have roughly doubled since mid-July — the branch this dashboard called low-probability is now measurable",
+ lead:`Your notifications caught it before the headlines did. Two items at 00:58 — oil flows surging and Kuwait and Qatar restoring shipments — are the same story, and it is the one your own tripwire was written for.`,
+ facts:[
+  ["Flows now","<b>7–8 million barrels a day</b> exiting Hormuz, up from about 4 million in mid-July. Vortexa put the seven-day average close to <b>10 million</b> as of Monday.","ct"],
+  ["Against pre-war","Roughly 20 million barrels a day before the war, with a 2025 baseline near 21.6 million. So flows are back to about <b>a third to a half</b> — up from a fifth.","ct"],
+  ["Kuwait and Qatar","Combined 2 million barrels a day before the war, now restored to about <b>70% of pre-conflict levels</b>. Both began shuttling around June and have ramped up despite the risk.","ct"],
+  ["How, exactly","Not because the Strait became safe. Through <b>shuttling</b> — ship-to-ship transfers in the Gulf of Oman, maximised pipeline use, and transiting in dark mode. Saudi Arabia joined after Red Sea attacks forced it back through the waterway.","ct"],
+  ["The risk is still live","A Kuwaiti supertanker <b>was struck earlier in August</b> while transiting. Washington and Tehran remain in a stalemate with control of Hormuz the main point of contention. Qatar's prime minister travelled to Tehran this week.","neg"],
+  ["Where oil sits","Brent near <b>$87</b>, against above $120 in late April. The Treasury Secretary said 130 million barrels were directed to foreign markets over the past 14 days.","ct"]
+ ]};
+
+const D28TRIP = {
+ t:"Read your own tripwire back",
+ b:`The DECIDE tab says: <b>\"Transits back above roughly 60 a day — genuine reopening, regardless of headlines.\"</b> And underneath it: <b>\"ship counts beat statements.\"</b><br><br>
+ That rule has now paid off twice. On 10 August one side claimed the Strait was open while traffic showed eight vessels. This time the statements are cautious and <b>the volumes are actually moving</b> — from 4 million to 7–8 million barrels a day, verified by trading sources rather than by a spokesperson.`,
+ w:`<b>But be precise about what has and has not happened.</b> This is not a reopening. It is Gulf producers routing around a chokepoint that is still dangerous, at roughly half the old volume, while a tanker was hit three weeks ago.<br><br>
+ The distinction matters for your positions. A negotiated reopening would collapse oil quickly. <b>Workarounds cap the upside in oil without removing the risk premium</b> — which is exactly what a Brent price of $87 against $120 in April describes.`
+};
+
+const D28JGB = {
+ t:"And the thing almost nobody is watching: Japan",
+ b:`The two-year Japanese government bond auction produced <b>the weakest demand measure since 2016</b>. One options desk put it plainly: soft demand there spills into global yields, and equity futures lose their bid fast, with dealers hedging downside on any break of the overnight range.<br><br>
+ Context from the same night: Tokyo's August inflation came in at 1.9% year on year, in line, and Japan's July jobless rate at 2.4%, below expectations.`,
+ w:`This is the same engine as the US 30-year at 5.27% — <b>a bond market demanding more to lend long</b>, now in a second major economy on the same night. Japan is the world's largest creditor nation; when its own auctions go badly, the money that normally flows outward stays home.<br><br>
+ For you it lands on the discount rate, which is the single largest lever on 72.6% of your shares. <b>It arrives on the morning Warsh speaks</b>, which is the worst possible sequencing.`
+};
+
+const D28MAP = [
+{i:"DAX 40",c:"pos",
+ n:"Cheaper, more available oil lowers what German industry pays for energy. That is Engine 4 — the composition and input-cost argument — working in your favour.",
+ r:"<b>The clearest beneficiary on this list.</b> Offset by the Japanese yield spillover, which hits every index. Net mildly positive.",
+ w:"Whether the record-setting is still led by energy, mining and banks. Once leadership moves, the composition story stops explaining anything."},
+{i:"FTSE 100 · UK100",c:"neg",
+ n:"The index is unusually heavy in energy and mining. Restored oil flows and Brent at $87 remove the engine that drove four record highs in late July, when energy gained 15% in a month.",
+ r:"<b>The clearest loser, and the dashboard has flagged this level as its most vulnerable for two weeks.</b> The July rally was built on an oil price that no longer exists.",
+ w:"The 10,750 support. The trigger was always sustained oil below $76 — but flows normalising does most of the same work."},
+{i:"NASDAQ 100 · US100",c:"neg",
+ n:"Two separate hits. The Japanese auction feeds global yields and the discount rate. And overnight: <b>NVIDIA halted revenue-sharing agreements</b> — a change to how the chip complex distributes economics.",
+ r:"Against that, one desk noted <b>washed-out tech positioning with roughly $1.3 trillion involved</b>. Extremely light positioning cuts both ways: less forced selling, but less fuel from short-covering too.",
+ w:"Whether the JGB spillover breaks the overnight range. Dealers are already hedging below it, which means a break gets amplified mechanically."},
+{i:"GOLD · XAUUSD",c:"gold",
+ n:"Two forces pulling opposite ways, again. Cheaper oil lowers inflation expectations, which under the corrected Engine 1 is <b>bullish</b> gold. But rising global yields from Japan raise the cost of holding something that pays no coupon — <b>bearish</b>.",
+ r:"The debasement trade remains the dominant driver: Treasury buybacks, a $1 trillion interest bill, central banks buying 288.9 tonnes in the second quarter.",
+ w:"Which force wins. If gold rises while global yields rise, the fiscal story has fully replaced the rate story — and that is a bigger regime change than anything in the Middle East."}
+];
+
+const D28POS = [
+{tk:"MP",w:"29.0%",c:"gold",
+ e:"<b>Barely touched directly.</b> Rare earths do not ship through Hormuz, and the sanctions target shipping, oil, crypto, gold and aviation — not minerals.",
+ i:"Indirect and mildly positive: lower oil lowers inflation pressure, which lowers hike odds, which helps risk appetite for smaller companies. But the two things that actually decide MP are unchanged — <b>27 November, and the fact that your break-even at $63.90 sits inside the chief executive's selling band.</b>"},
+{tk:"3CP",w:"33.8%",c:"pos",
+ e:"<b>The quiet beneficiary, and this is the least obvious link on the page.</b> China received roughly a third of its oil through the Strait before the war and is the largest importer affected.",
+ i:"Restored flows and Brent at $87 against $120 in April mean materially lower input and logistics costs for Chinese manufacturing. For a company that <b>absorbs</b> cost rather than passing it on — which is exactly what the external events matrix says about Xiaomi — cheaper energy goes straight to the margin.<br><br>This does not fix the vehicle division losing 3.1 billion yuan a quarter. It helps at the edges of the one number that decides the position."},
+{tk:"BBAI",w:"37.1%",c:"neg",
+ e:"<b>The most exposed to tonight's risks and the least to the good news.</b> No energy input, no China link.",
+ i:"Both negatives land here: rising global yields from the Japanese auction hit high-beta small companies hardest, and NVIDIA halting revenue-sharing agreements pressures the whole AI complex on sentiment.<br><br>With 30.93% of the float short and roughly one to three days to cover, moves in either direction are amplified. The share count remains the actual driver — but this is a poor backdrop for it."},
+{tk:"VCIG",w:"0.06%",c:"mu",
+ e:"Nothing on this page reaches €7.29 of remaining value.",
+ i:"Note only that the sanctions package explicitly targets <b>gold</b> trade among other things — and this company's stated pivot was to a gold treasury strategy. At this size it is a curiosity, not a position."}
+];
+
+const D28OTHER = [
+ ["Canada retaliated at scale","An additional <b>$27.6 billion</b> in tariffs on American businesses, including 50% on American steel and aluminium, 25% on American fish and 25% on American tools — in response to the 19 August measures.","Your policy register predicted the shape: a measure with a date produces a counter-measure. Neither side touches your four positions directly."],
+ ["Warsh speaks today","A key focus will be inflation and the Fed's path, with the speech landing as Treasury yields sit near multi-decade highs.","One widely-followed options strategist argues he will endorse letting the market set rates and call for fiscal discipline — producing an initial hawkish move with the 30-year jumping, then stabilisation. Treat that as one person's thesis, not a forecast."],
+ ["US natural gas and LNG","Gas futures rose 2.3% to $2.907, and LNG feedgas demand jumped 12% week on week.","Consistent with energy normalising rather than collapsing. Worth noting because the dashboard's energy coverage is thin."],
+ ["Regulatory noise","The trade regulator is probing YouTube over social media practices; a city credit rating was downgraded.","Neither reaches your positions. Included so you can see what was screened out."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>FRIDAY 28 AUGUST</b> · THE TRIPWIRE FIRED</div>
+ <div class="card hl" style="margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${D28.h}</div>
+   <span class="tag st pos">VERIFIED</span></div>
+  <div class="lede" style="margin-bottom:10px">${D28.lead}</div>
+  <div class="tw"><table><tbody>
+  ${D28.facts.map(f=>`<tr class="wrap"><td class="mono gold" style="width:180px;vertical-align:top"><b>${f[0]}</b></td>
+   <td class="${f[2]=='neg'?'neg':''}">${f[1]}${SB('ct')}</td></tr>`).join("")}
+  </tbody></table></div>
+ </div>
+
+ <div class="grid g2" style="margin-bottom:14px">
+  <div class="card" style="border-color:#c9e2d5">
+   <div class="ctl" style="font-size:13px;margin-bottom:6px">${D28TRIP.t}</div>
+   <div class="blk p">${D28TRIP.b}</div>
+   <div class="blk n"><div class="h">But be precise</div>${D28TRIP.w}</div></div>
+  <div class="card" style="border-color:#e0c5c5">
+   <div class="ctl" style="font-size:13px;margin-bottom:6px">${D28JGB.t}</div>
+   <div class="blk">${D28JGB.b}${SB('fe')}</div>
+   <div class="blk n"><div class="h">Why it matters more than it looks</div>${D28JGB.w}</div></div>
+ </div>
+
+ <div class="sh"><b>WHAT IT SAYS ABOUT YOUR INSTRUMENTS</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="width:130px">Instrument</th><th style="min-width:340px">The mechanism</th><th style="min-width:330px">The counterweight</th><th style="min-width:280px">What to watch</th></tr></thead><tbody>
+ ${D28MAP.map(m=>`<tr class="wrap"><td><b class="${m.c=='pos'?'pos':m.c=='neg'?'neg':'gold'}">${m.i}</b></td>
+  <td>${m.n}</td><td>${m.r}</td><td class="tx2">${m.w}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>WHAT IT SAYS ABOUT YOUR FOUR POSITIONS</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${D28POS.map(p=>`<div class="card" style="border-color:${p.c=='pos'?'#c9e2d5':p.c=='neg'?'#e0c5c5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl">${p.tk}<small>${p.w} of your shares</small></div>
+   <span class="tag st ${p.c}">${p.c=='pos'?'HELPED':p.c=='neg'?'HURT':p.c=='gold'?'MIXED':'NO EFFECT'}</span></div>
+  <div class="blk"><div class="h">Direct exposure</div>${p.e}</div>
+  <div class="blk ${p.c=='pos'?'p':p.c=='neg'?'n':'g'}"><div class="h">The actual read</div>${p.i}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>THE REST OF THE OVERNIGHT FEED</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:200px">Item</th><th style="min-width:400px">What happened</th><th style="min-width:340px">Reading</th></tr></thead><tbody>
+ ${D28OTHER.map(o=>`<tr class="wrap"><td><b>${o[0]}</b></td><td>${o[1]}${SB('ct')}</td><td class="tx2">${o[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">The morning in one line</div>
+ Oil is normalising through workarounds rather than through peace, which helps Germany and China and hurts the UK index. Japan's bond auction is the new risk and it lands on the morning the Fed chair speaks. <b>Your energy-sensitive exposure is indirect; your yield-sensitive exposure is 72.6% and unhedged.</b><br><br>
+ Nothing here is a reason to trade before Warsh. Everything here is a reason to read what he says with the Japanese auction in mind.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["HORMUZ","7–8m bpd · from 4m in July","fresh"],
+  ["NEW RISK","weakest JGB demand since 2016","fresh"],
+  ["TODAY","Warsh at Jackson Hole","stale"],
+  ["VERSION","36.0 · 28 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v36 · 28 AUGUST";
+},5100);
+
+
+
+/* ═══════════ v37 — WARSH SPOKE · 28 AUGUST ═══════════ */
+
+const W28 = {
+ h:"Warsh sharpened the inflation warning — and a majority of investors now expects a September hike",
+ lead:`This is the single most consequential development for your portfolio since the sale. The tripwire in your DECIDE tab reads: <b>rate-rise odds above 65% — reduce broadly.</b> They were 31–34% this morning.`,
+ said:[
+  ["On inflation","<b>\"While this summer's readings were better than expected, they do not tell me that underlying trends have meaningfully improved.\"</b> He recommitted to the 2% target and said elevated prices should be the central bank's main focus.","neg"],
+  ["On the economy","Said he was <b>\"impressed\"</b> with the economy's overall strength. Consumer spending healthy.","neg"],
+  ["On financial conditions","Described them as <b>not broadly restrictive</b> — a change from July, when he called them uneven.","neg"],
+  ["On guidance","Doubled down on refusing it: <b>\"We should not indulge a regime in which market participants are looking primarily to the Fed for their next trade.\"</b>","gold"],
+  ["On credibility","<b>\"We can be held accountable for delivering on our remit — the only true test of our credibility.\"</b> A direct swipe at critics of his July press conference.","gold"],
+  ["On AI and the balance sheet","Short-term rates remain the main tool; AI and balance sheet questions are <b>not driving near-term policy.</b>","inf"],
+  ["What he did NOT do","He stopped well short of explicitly signalling a hike at the September meeting.","gold"]
+ ]};
+
+const W28MKT = [
+ ["Rate expectations","<b>A majority of investors now expects a September hike</b>","From 31–34% this morning. This is the number that matters to you.","neg"],
+ ["Gold","Fell over 1% immediately, then recovered","One desk posted \"gold down on Warsh hawkish comments\" at 16:47 and \"Update: gold was right\" at 17:59. The initial drop was the rate reaction; the recovery is the debasement trade reasserting.","gold"],
+ ["USD/JPY","Rose 0.3% to <b>159.86</b>, its highest level","See the correction below. The dollar strengthened.","neg"],
+ ["US equities","Moved lower; S&P 500 down","Hawkish means profit-taking in high-beta names first — which is what you own.","neg"],
+ ["Bonds","Dropped ahead of the speech, then repriced on it","The 30-year touched 5.31% on 17 August, its highest since 2007.","neg"]
+];
+
+const W28FIX = {
+ t:"A correction to what I told you yesterday",
+ b:`I explained the Japanese auction as the start of repatriation — Japanese money coming home, selling dollars, weakening the dollar.<br><br>
+ <b>USD/JPY rose to 159.86, its highest level. The dollar strengthened against the yen.</b> That is the opposite of what the repatriation story predicts.`,
+ w:`The mechanism I described is real and the weak auction was real. But it did not drive the currency this week — <b>the rate differential did.</b> A hawkish Fed chair widens the gap between US and Japanese rates, which pulls money towards dollars, which is exactly the carry trade working rather than unwinding.<br><br>
+ <b>What that means practically:</b> repatriation is a risk that has not started, not a process already underway. It becomes live when Japanese rates rise while US rates fall — the reverse of today.<br><br>
+ And for you there is a silver lining hiding in the correction: <b>a stronger dollar raises the euro value of your holdings.</b> The same hawkishness that hurts your share prices helps your currency translation. Not enough to offset it, but it is real.`
+};
+
+const W28YOU = [
+ ["Your rate exposure","<b>THE CRITICAL ONE</b>","72.6% of your shares lose if rates rise and nothing gains. Your two hedges — Ageas and Patria — were sold on 14 August. If the majority is right about September, this is the position you would least want to hold.","neg"],
+ ["The trigger in your own dashboard","<b>WATCH IT</b>","DECIDE says: above 65% odds, reduce broadly. \"A majority expects a hike\" is not a precise number — <b>get the actual probability before acting.</b> Majority could mean 51% or 80%, and those are different decisions.","gold"],
+ ["High-beta first","<b>ALREADY VISIBLE</b>","Hawkish surprises hit high-beta names before the index. BigBear.ai at 37.1% with 30.93% of its float short is the textbook profile for that.","neg"],
+ ["Gold's split reaction","<b>INSTRUCTIVE</b>","It fell on the rate news and recovered anyway. That is the debasement trade beating the rate trade in real time — the clearest evidence yet that the fiscal story has become the dominant driver.","inf"],
+ ["Your cash","<b>WORTH MORE TODAY</b>","€8,297.86, untouched through four events. If rates do rise in September, cash earns more and your entry points improve. This is the week that argument paid.","pos"]
+];
+
+const W28ELSE = [
+ ["US corporate profits surge to record","Confirms the picture Warsh described: strong economy, sticky inflation. <b>It removes the excuse not to hike.</b>","neg"],
+ ["Fed's Hammack: the low-rate era was the exception","One of the three July dissenters, reinforcing the hawkish frame in public.","neg"],
+ ["US developing AI regulations to limit China","Touches your 27 November exposure — MP gains on Chinese restriction, Xiaomi loses. Watch for detail.","gold"],
+ ["NVIDIA-supported Lambda secures $1bn · Andreessen raises $1.1bn for hardware","AI capital spending is continuing at scale. Supports the cluster that is 99.9% of your shares.","pos"],
+ ["PayPal shares fall 14% after report","Not yours. Included as a reminder of what a single disappointing report does to a rate-sensitive name in this tape.","inf"],
+ ["Canada Q2 GDP 3.3% against 3.4% expected","Roughly in line. The tariff exchange has not yet shown up in the data.","inf"],
+ ["Goldman raises 12-month target","Source class: analyst estimate — the weakest evidence in this dashboard.","mu"]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>FRIDAY 28 AUGUST · 16:00</b> · WARSH SPOKE</div>
+ <div class="card hl" style="border-color:#c9a0a0;margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${W28.h}</div>
+   <span class="tag st neg">TRIPWIRE TERRITORY</span></div>
+  <div class="lede" style="margin-bottom:10px">${W28.lead}</div>
+  <div class="tw"><table><tbody>
+  ${W28.said.map(x=>`<tr class="wrap"><td class="mono gold" style="width:190px;vertical-align:top"><b>${x[0]}</b></td>
+   <td class="${x[2]=='neg'?'neg':''}">${x[1]}${SB('ct')}</td></tr>`).join("")}
+  </tbody></table></div>
+ </div>
+
+ <div class="sh"><b>WHAT THE MARKET DID</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:150px">Market</th><th style="min-width:260px">Move</th><th style="min-width:440px">Reading</th></tr></thead><tbody>
+ ${W28MKT.map(m=>`<tr class="wrap"><td><b>${m[0]}</b></td>
+  <td class="${m[3]=='neg'?'neg':m[3]=='gold'?'gold':''}">${m[1]}</td><td>${m[2]}${SB('fe')}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="card" style="border-color:#c9a0a0;margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:14px">${W28FIX.t}</div>
+   <span class="tag st neg">I WAS WRONG</span></div>
+  <div class="blk n">${W28FIX.b}</div>
+  <div class="blk g"><div class="h">What it actually means</div>${W28FIX.w}</div>
+ </div>
+
+ <div class="sh"><b>WHAT IT MEANS FOR YOU</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:180px">Area</th><th>Status</th><th style="min-width:480px">Reading</th></tr></thead><tbody>
+ ${W28YOU.map(y=>`<tr class="wrap"><td><b>${y[0]}</b></td>
+  <td><span class="tag st ${y[3]}">${y[1].replace(/<\/?b>/g,'')}</span></td><td>${y[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>THE REST OF THE DAY</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><tbody>
+ ${W28ELSE.map(e=>`<tr class="wrap"><td style="width:330px"><b>${e[0]}</b></td>
+  <td class="${e[2]=='neg'?'neg':e[2]=='pos'?'pos':''}">${e[1]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">What to do with this — and what not to</div>
+ <b>Do not act on "a majority expects a hike."</b> That is a description, not a number. Your written trigger is 65%, and the difference between 51% and 80% is the difference between watching and reducing. <b>Get the actual probability first.</b><br><br>
+ What has genuinely changed: the odds moved a long way in one speech, your exposure to that move is 72.6% with nothing on the other side, and the next data point — the jobs report on 4 September — now carries more weight than it did this morning.<br><br>
+ And the honest scoreboard: this dashboard framed the sanctions wrong, the China chain wrong, the yen direction wrong — and right on the one that mattered, which was to hold cash through the week rather than deploy into it.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["WARSH","hawkish · majority now expects Sept hike","fresh"],
+  ["YOUR EXPOSURE","72.6% rate-negative · 0% hedged","stale"],
+  ["NEXT","4 Sep jobs · 11 Sep inflation · 16-17 Sep FOMC","stale"],
+  ["VERSION","37.0 · 28 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v37 · WARSH HAWKISH";
+},5300);
+
+
+
+/* ═══════════ v38 — SEASONALITY ═══════════ */
+
+const SEASPRINC = [
+{t:"Prices move on anticipation, not on the event",c:"g",
+ b:"The core idea from the source material: <b>future prices move when anticipating change and adjust when that change is realised.</b> Heating oil peaks <i>before</i> the coldest weather arrives, not during it. By the time the cold is here, refineries have geared up and the market has turned to liquidating inventory.<br><br>This is the same structure as the bar argument in Engine 5 — <b>by the time the news is here, it is in the price.</b>"},
+{t:"Four components of every cycle",c:"i",
+ b:"A seasonal low, a seasonal rise, a seasonal high, a seasonal decline. Translated: greatest supply and least demand, then increasing demand and decreasing supply, then greatest demand and least supply, then decreasing demand and increasing supply.<br><br>Knowing <b>which of the four you are in</b> is more useful than knowing the average pattern."},
+{t:"The pattern is never clean",c:"n",
+ b:"Seasonal declines are punctuated by brief rallies and rises by brief dips. Cattle prices fall from March into June but rally in early May as retailers stock beef for holiday barbecues. Soybeans decline from June into the October harvest, but by early September the market has typically priced a frost scare.<br><br><b>The interruptions are as reliable as the trend</b>, and they are where the entries are."},
+{t:"Mechanical selling that has nothing to do with value",c:"n",
+ b:"Uptrends get interrupted by artificial selling around <b>first notice day</b> — traders liquidating to avoid physical delivery. That is the same category as your quad witching entries: a date that moves price without any news."},
+{t:"Why it works at all",c:"g",
+ b:"Because the underlying cause is genuinely annual: weather, harvests, tax dates, fiscal years, festivals. <b>These are calendar facts, not opinions.</b> That is why seasonality belongs in this dashboard — it is the same evidence class as a policy measure with an effective date."},
+{t:"And the honest limit",c:"neg",
+ b:"The patterns in the source material were built on 10–15 year windows from the 1980s and 1990s. <b>Energy markets have since been rebuilt</b> by shale, by electric vehicles, by LNG. A pattern that no longer has a live cause is a coincidence with a chart.<br><br>Rule: only trust a seasonal if you can name the mechanism that still causes it <b>this year</b>."}
+];
+
+const SEASNOW = [
+ {d:"NOW — late August",e:"<b>Atlantic hurricane season peak</b>",m:"The season runs 1 June to 30 November and peaks in <b>August and September</b>. Gulf production and refining shut in ahead of storms.",y:"Oil is already elevated on the Strait. A storm on top of that is the one supply shock nobody is positioned for.",c:"neg"},
+ {d:"NOW — through 30 September",e:"<b>US government fiscal year-end</b>",m:"The federal year ends 30 September. Agencies spend remaining budget rather than lose it, so contract awards cluster heavily in July–September.",y:"<b>This is BigBear.ai's season and it is happening right now.</b> See the position table below.",c:"pos"},
+ {d:"September",e:"Historically the weakest month for equities",m:"Fund year-ends, tax-loss positioning and returning volume after the summer.",y:"It lands on the same month as the rate decision and quad witching. Three unrelated pressures on one calendar page.",c:"neg"},
+ {d:"1 October",e:"<b>The Treasury bond seasonal</b>",m:"From the source material: the fiscal year begins 1 October, increasing liquidity and easing borrowing demands — and bond prices have tended to rise from then, culminating around personal income tax liability for the calendar year.",y:"Rising bond prices means <b>falling yields</b>, which is the single thing that would most help 72.6% of your shares. Worth watching, not worth trading.",c:"pos"},
+ {d:"Oct–November",e:"Indian festival and wedding gold demand",m:"Diwali and the wedding season are the largest physical gold buying window of the year.",y:"You hold no gold. But it explains why the seasonal pull is upward into year-end, on top of the debasement trade.",c:"gold"},
+ {d:"11 November",e:"<b>Singles' Day</b>",m:"The largest shopping event in the world, and the peak of the Chinese consumer electronics year.",y:"Xiaomi at 33.8%. Q4 is structurally its strongest quarter for phone shipments.",c:"pos"},
+ {d:"Q4 into Q1",e:"Tanker winter demand",m:"Crude and product demand peaks in the northern winter, so freight rates typically firm from Q4.",y:"You hold no tankers — but the candidate list does, and rates are already extreme from the Strait.",c:"gold"},
+ {d:"Late December",e:"Fiscal-year bond seasonal turns",m:"The rise from 1 October has historically run into the calendar year-end.",y:"Coincides with the 8–9 December meeting and 18 December quad witching.",c:"inf"}
+];
+
+const SEASPOS = [
+{tk:"BBAI",w:"37.1%",str:"STRONG — AND ACTIVE NOW",c:"pos",
+ pat:"<b>The US federal fiscal year ends 30 September.</b> Agencies that do not spend their budget lose it, so contract awards concentrate heavily in the July–September quarter. For a company whose revenue is almost entirely government and defence, this is the single most important seasonal in your book.",
+ now:"You are <b>inside that window right now</b>, with about a month left. The trigger sheet says annual guidance becomes unreachable below roughly ten contract wins a quarter — and this is structurally the easiest quarter to hit that.",
+ risk:"The mirror image is the first fiscal quarter, October–December, which is typically slow. Worse, if the new year begins under a continuing resolution rather than a passed budget, new awards can stall entirely.<br><br><b>So a strong Q3 followed by a weak Q4 would be seasonal, not deterioration</b> — and the market may not make that distinction. Note also that this seasonal does nothing about the share count, which remains the actual driver."},
+{tk:"3CP",w:"33.8%",str:"STRONG",c:"pos",
+ pat:"Chinese consumer electronics runs on a festival calendar. <b>Singles' Day on 11 November</b> is the largest, the 618 festival in June is second, and Chinese New Year drives a Q1 pattern. Phone shipments concentrate in Q4.<br><br>Vehicles have their own: deliveries are typically pushed into December to meet annual targets, then slump in the first quarter after the holiday.",
+ now:"Reported this week into the seasonally weaker part of the year. <b>The next two quarters are its strongest</b> — Q4 for phones and vehicles both.",
+ risk:"Q1 is the seasonal trough for both businesses at once. If you are still holding in February, expect a soft quarter that is calendar rather than deterioration. And a strong Q4 tells you less than it appears, because Q4 is supposed to be strong."},
+{tk:"MP",w:"29.0%",str:"WEAK — POLICY DOMINATES",c:"gold",
+ pat:"Rare earths have no weather cycle. What rhythm exists is administrative: Chinese export quotas are issued in batches through the year, and Western industrial buying follows the automotive and defence production calendar.",
+ now:"<b>Nothing seasonal is driving this position.</b> 27 November is a policy date, not a seasonal one — the difference matters, because a policy date can be cancelled and a season cannot.",
+ risk:"Do not manufacture a seasonal here. The two things that decide MP remain the government support ratio and the fact that your break-even at $63.90 sits inside the chief executive's selling band."},
+{tk:"VCIG",w:"0.06%",str:"NONE",c:"mu",
+ pat:"Share issuance has no season.",now:"—",risk:"—"}
+];
+
+const SEASINST = [
+ ["GOLD","Firm August into year-end","Indian festival and wedding demand peaks October–November; Chinese New Year buying follows in January. Seasonally soft March–June.","Currently amplified by the debasement trade, which is not seasonal at all. When two forces agree, do not credit the weaker one.","pos"],
+ ["SILVER","Follows gold, plus an industrial leg","The monetary leg tracks gold's calendar. The industrial leg follows electronics and solar production schedules, which do not share it.","Already above the $64 level this dashboard carried. Two drivers, only one of which is seasonal.","gold"],
+ ["WTI CRUDE","Two overlapping cycles","<b>Gasoline</b> bottoms in winter and rises anticipating the summer driving season, peaking around its official start. <b>Heating oil</b> bottoms in July and rises anticipating winter, peaking <i>before</i> the coldest weather.","Right now: hurricane season peak, heating oil entering its anticipatory rise, and a Strait that is half-reopened. The seasonal is bullish and the news flow is bearish.","neg"],
+ ["NATURAL GAS","Winter demand, storage cycle","Injection season through summer, withdrawal from November. Storage levels versus the five-year average is the number that matters.","Your feed showed gas futures up 2.3% and LNG feedgas demand up 12% week on week — that is the seasonal turn beginning.","gold"],
+ ["NASDAQ · S&P","September weakest, Q4 strongest","Fund year-ends and returning volume make September historically poor. November–December historically strong.","This September also carries the rate decision and quad witching. Seasonality is the weakest of the three forces on that page.","neg"],
+ ["30-YEAR BONDS","Rise from 1 October","From the source material: the fiscal year begins 1 October, easing borrowing demands, and prices have tended to rise from then into the calendar year-end. The decline into May may reflect tighter liquidity as taxes are paid.","<b>Rising bond prices means falling yields.</b> If this still holds, it is the seasonal most relevant to you — and it starts in five weeks.","pos"],
+ ["DAX · FTSE","European summer lull, autumn return","Thin August volume, volume returns in September.","Composition still explains more than season for both.","inf"]
+];
+
+const SEASSECT = [
+ ["Agriculture and fertiliser","Planting drives spring demand; harvest pressures autumn prices. Soybeans decline June–July into the October harvest but typically price a frost scare by early September.","<b>Your phosphate gap.</b> Your own policy measure names phosphorus and you hold nothing — and the sector has a genuine annual cycle on top of it."],
+ ["Tankers","Winter demand peak, freight firms Q4 into Q1.","On your candidate list. Charter rates are already extreme from the Strait, so the seasonal would land on top of a dislocation rather than in a normal market."],
+ ["Utilities and power","Two peaks: summer cooling and winter heating. Shoulder seasons in spring and autumn are weakest.","Your worst-covered policy gap. A director bought an electric utility on 6 August — which is in the shoulder season, not the peak."],
+ ["Retail and consumer","Holiday quarter dominates. A weak Q4 for a retailer is far more serious than a weak Q2.","Not held. Relevant as read-across: Walmart's slowest growth in six years arrived <i>before</i> the season that matters."],
+ ["Insurance","Hurricane season losses June–November, peaking now. Renewal pricing follows in January.","You sold both insurance distributors on 14 August — one month before the seasonal risk peak. Accidental timing, but worth noting in the log."],
+ ["Steel and construction","Construction slows in winter in northern markets; order books build in spring.","Your named-beneficiary gap from the Brazil tariff."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ $("#tabs").insertAdjacentHTML("beforeend",`<div class="tab" data-t="seas"><i>❄</i>SEASONALITY</div>`);
+ document.getElementById("panels").insertAdjacentHTML("beforeend",`<div class="panel" id="p-seas"><div class="w" id="c-seas"></div></div>`);
+ document.querySelectorAll(".tab").forEach(x=>x.onclick=()=>go(x.dataset.t));
+
+ $("#c-seas").innerHTML=`
+ <div class="sh"><b>SEASONALITY</b> · THE CALENDAR THAT REPEATS EVERY YEAR</div>
+ <div class="lede">Weather, harvests, tax dates, fiscal years and festivals happen on schedule. That makes them the <b>same evidence class as a policy measure with an effective date</b> — a cause you can name, on a date you can look up. This tab covers the principle, what is live right now, and what it means for each of your four positions.</div>
+
+ <div class="sh"><b>1 · HOW SEASONALITY ACTUALLY WORKS</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${SEASPRINC.map(p=>`<div class="blk ${p.c=='neg'?'n':p.c}"><div class="h">${p.t}</div>${p.b}</div>`).join("")}
+ </div>
+
+ <div class="sh"><b>2 · WHAT IS LIVE RIGHT NOW</b></div>
+ <div class="lede">Ordered by date. The first two are happening as you read this.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="width:150px">When</th><th style="min-width:200px">What</th><th style="min-width:360px">The mechanism</th><th style="min-width:340px">What it means for you</th></tr></thead><tbody>
+ ${SEASNOW.map(s=>`<tr class="wrap" ${s.d.startsWith("NOW")?'style="background:#fbf8ef"':''}>
+  <td class="mono gold"><b>${s.d}</b></td><td class="${s.c=='neg'?'neg':s.c=='pos'?'pos':''}">${s.e}</td>
+  <td class="tx2">${s.m}</td><td>${s.y}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>3 · YOUR FOUR POSITIONS</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${SEASPOS.filter(p=>p.tk!="VCIG").map(p=>`<div class="card" style="border-color:${p.c=='pos'?'#c9e2d5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl">${p.tk}<small>${p.w} of your shares</small></div>
+   <span class="tag st ${p.c}">${p.str}</span></div>
+  <div class="blk i"><div class="h">The pattern</div>${p.pat}</div>
+  <div class="blk p"><div class="h">Where you are in it</div>${p.now}</div>
+  <div class="blk n"><div class="h">The catch</div>${p.risk}</div></div>`).join("")}
+ </div>
+ <div class="warn goldbox"><div class="h">The finding that matters most</div>
+ <b>BigBear.ai is inside its strongest seasonal window right now</b>, with about a month left. The US federal fiscal year ends 30 September, agencies spend or lose their budgets, and contract awards concentrate in July–September.<br><br>
+ That cuts two ways. It makes the coming quarter structurally the easiest one to hit the contract-win threshold in your trigger sheet. <b>And it means a weak October–December would be seasonal rather than deterioration</b> — which is exactly the kind of distinction a market in a hurry fails to make.<br><br>
+ It changes nothing about the share count, which remains the actual driver. But it does mean you should read the next two quarterly reports with the calendar in hand.</div>
+
+ <div class="sh"><b>4 · YOUR INSTRUMENTS</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="width:130px">Instrument</th><th style="min-width:190px">The pattern</th><th style="min-width:400px">The mechanism</th><th style="min-width:330px">Right now</th></tr></thead><tbody>
+ ${SEASINST.map(i=>`<tr class="wrap"><td><b class="${i[4]=='pos'?'pos':i[4]=='neg'?'neg':''}">${i[0]}</b></td>
+  <td>${i[1]}</td><td class="tx2">${i[2]}</td><td>${i[3]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>5 · THE SECTORS IN YOUR UNIVERSE</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="width:190px">Sector</th><th style="min-width:420px">The cycle</th><th style="min-width:380px">Relevance to you</th></tr></thead><tbody>
+ ${SEASSECT.map(s=>`<tr class="wrap"><td><b>${s[0]}</b></td><td>${s[1]}</td><td class="tx2">${s[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn"><div class="h">How to use this without fooling yourself</div>
+ <b>One rule:</b> only trust a seasonal if you can name the mechanism that still causes it this year. A federal fiscal year ending 30 September is a law. A hurricane season is meteorology. Those hold.<br><br>
+ A pattern in an energy chart built on data from 1986 to 1995 may not hold at all — that market has since been rebuilt by shale, by electric vehicles and by liquefied gas. <b>A pattern without a live cause is a coincidence with a chart.</b><br><br>
+ And remember the ordering: seasonality is real but it is the <b>weakest</b> of the forces on your page. This September carries a rate decision, a quad witching and a seasonal tendency. Only one of those three is worth acting on, and it is not the season.</div>
+ <div style="height:40px"></div>`;
+
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v38 · SEASONALITY";
+},5500);
+
+
+
+/* ═══════════ v39 — MONDAY 31 AUGUST · FULL UPDATE ═══════════ */
+
+const D31 = {
+ h:"The US struck Iranian rocket launchers in the Strait, oil jumped 2%, and a September hike is now more likely than not",
+ lead:`Three days ago this dashboard reported that Hormuz flows had roughly doubled. That has just been interrupted militarily. And NVIDIA answered the open question from Wednesday in the way Engine 5 predicted.`,
+ fri:[
+  ["S&P 500","7,711.76","−0.25%",-1,"Still finished the week <b>up 0.5%</b>."],
+  ["Nasdaq Composite","26,402.42","−0.52%",-1,"Up 0.9% on the week, weighed down Friday by semiconductors."],
+  ["Dow Jones","53,559.99","−0.02%",-1,"Up 0.5% on the week — its <b>first winning week in three</b>."],
+  ["NVIDIA","—","−4.45%",-1,"<b>See the box below. This is the answer to Wednesday's open question.</b>"],
+  ["30-year Treasury","5.31%","—",-1,"Highest since 2007."]
+ ],
+ mon:[
+  ["Brent crude (Nov)","$89.46","+1.54%",1,"Global benchmark gained 2% at the open."],
+  ["WTI (Oct)","$84.60","+1.44%",1,"Both on the Larak Island strike."],
+  ["Kospi","—","−0.52%",-1,"Led regional declines. Pared earlier, larger losses."],
+  ["Nikkei 225","—","−0.57%",-1,"—"],
+  ["Hang Seng","—","−0.71%",-1,"<b>Relevant to Xiaomi's open.</b>"],
+  ["CSI 300","—","−0.81%",-1,"Mainland China, the weakest of the region."],
+  ["S&P 500 futures","—","−0.36%",-1,"Dow futures −155 points, Nasdaq-100 futures −0.4%."]
+ ]};
+
+const D31F = [
+{t:"The Strait escalated again — three days after it was normalising",c:"neg",pri:1,
+ b:`US forces struck <b>two Iranian rocket launchers on Larak Island</b> in the Strait of Hormuz on Sunday. The launchers were reported to be preparing to send <b>mines</b> into the waterway. The action <b>ended weeks of relative calm</b> and reignited escalation fears. Vessel traffic through the Strait has been severely disrupted with the conflict set to extend into its seventh month.`,
+ w:`On Friday this dashboard reported flows at 7–8 million barrels a day, up from 4 million in mid-July, achieved by routing around the chokepoint. <b>That improvement was built on workarounds, not on safety — and this is what that distinction means in practice.</b><br><br>
+ Mines are a different category from missiles. A mined waterway cannot be shuttled around; it closes for everyone, including the ship-to-ship transfers that produced the improvement.<br><br>
+ Your tripwire stands unchanged: <b>ship counts beat statements.</b> Watch the transit numbers this week, not the headlines about the strike.`},
+{t:"NVIDIA fell 4.45% on Friday — after beating on Wednesday",c:"neg",pri:2,
+ b:`NVIDIA reported earnings of <b>$2.22 against a $2.09 consensus</b>, more than double the prior year. Chipmakers rallied on it. <b>Then on Friday NVIDIA fell 4.45%</b>, leading Dow losses, with Broadcom −0.7%, AMD −2.3% and Lam Research −5.2%.<br><br>
+ And the cleaner example alongside it: <b>Marvell fell 10.3% despite beating estimates and raising its outlook.</b>`,
+ w:`<b>This settles the test from Wednesday's update.</b> Engine 5 said: find out where the bar is, not just what the number will be. NVIDIA entered the print at roughly 25 times forward earnings — its cheapest since 2019 — beat, and still could not hold the gain.<br><br>
+ The bar argument survives in its strongest form. <b>Even a cheap price plus a doubling of profit is not enough when growth of nearly 100% is already assumed.</b><br><br>
+ Note who did hold: the large cloud operators. Alphabet +1.5%, Microsoft +1.7%, Amazon +4%, Meta +1.2%. Money rotated <i>within</i> the AI trade rather than leaving it — from the chip suppliers to the buyers of chips.`},
+{t:"A September hike is now more likely than not",c:"neg",pri:3,
+ b:`Warsh said underlying inflation was <b>not slowing</b> and pledged to keep fighting price growth until it converges with the 2% target. One analyst summary: <b>\"Although we doubt this was intended to foreshadow September's tightening given his distaste for signalling, his hawkish discussion makes a 25bp September hike more likely than not.\"</b><br><br>
+ The dollar posted its biggest gain in about a month and held those gains into Monday.`,
+ w:`<b>Now put that against your own trigger.</b> DECIDE says: above 65% odds, reduce broadly. \"More likely than not\" means above 50%.<br><br>
+ The path is worth seeing: the implied chance of a September hike fell from <b>nearly 100% in late July to roughly one-third</b> by mid-August, and Warsh has now pushed it back above half in a single speech.<br><br>
+ You are not at your threshold. You are closer to it than at any point since you sold your two rate hedges on 14 August. <b>Get the precise number before 4 September.</b>`},
+{t:"And the contradiction nobody has resolved",c:"gold",pri:4,
+ b:`Over the same stretch that hike odds <i>fell</i> from nearly 100% to one-third, the 30-year yield <i>climbed</i> from about 5.09% to <b>5.31%</b>, its highest since 2007.`,
+ w:`At first glance those moves look backward. Less expected tightening should mean lower long-term borrowing costs, not higher.<br><br>
+ <b>The explanation is that the long end has stopped trading the Fed and started trading the debt.</b> That is the same conclusion the gold price reached, and it is why the Treasury buyback failed within a day.<br><br>
+ For you it means something specific: <b>even a dovish surprise may not lower the 30-year.</b> The lever that would help 72.6% of your shares is no longer fully in the Fed's hands.`},
+{t:"August closed as a winning month",c:"pos",pri:5,
+ b:`The Dow rose <b>2.1%</b> in August, a fifth consecutive monthly advance. The S&P gained <b>3%</b> and the Nasdaq <b>4%</b> — their first monthly increases since May.`,
+ w:`Worth holding alongside everything above. The tape felt terrible for two weeks and still finished the month up.<br><br>
+ <b>That is the argument against reading any single week as a trend</b> — and it is also why your written triggers use levels rather than feelings.`}
+];
+
+const D31POS = [
+ {tk:"BBAI",w:"37.1%",c:"neg",r:"Risk-off open with Asian markets lower and futures down. High-beta small caps lead declines. <b>But note the seasonal:</b> the federal fiscal year ends 30 September, and contract awards cluster now. The seasonal tailwind and the tape are pulling opposite ways."},
+ {tk:"3CP",w:"33.8%",c:"neg",r:"<b>Worst regional backdrop.</b> Hang Seng −0.71% and CSI 300 −0.81% are the two indices that matter for the open. Just reported into a weakening tape."},
+ {tk:"MP",w:"29.0%",c:"gold",r:"Escalation is broadly supportive for critical minerals sentiment, and MP is the only holding with an inverted exposure to conflict. But rare earths do not ship through Hormuz — this is sentiment, not mechanism. Your $63.90 break-even inside the seller's band is unchanged."},
+ {tk:"VCIG",w:"0.06%",c:"mu",r:"No effect at €7.29."}
+];
+
+const D31WEEK = [
+ ["Tue 1 Sep","ISM Manufacturing · JOLTS job openings · July construction spending","JOLTS is the labour data nobody watches and the Fed does."],
+ ["Wed 2 Sep","ADP employment · factory orders · <b>Beige Book</b>","The Beige Book is the anecdotal read on the economy across all districts — useful for the consumer question."],
+ ["Thu 3 Sep","ISM Services","Services inflation is the component that would break the easing trend."],
+ ["Fri 4 Sep","<b>August payrolls and unemployment rate</b>","<b>The week's event.</b> Reading order unchanged: unemployment rate, then participation, then revisions, then wages."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>MONDAY 31 AUGUST</b> · FULL UPDATE</div>
+ <div class="card hl" style="border-color:#c9a0a0;margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${D31.h}</div>
+   <span class="tag st neg">VERIFIED</span></div>
+  <div class="lede" style="margin-bottom:10px">${D31.lead}</div>
+  <div class="grid g2">
+   <div><div class="desk">FRIDAY 28 AUGUST CLOSE</div>
+   <div class="tw"><table><tbody>
+   ${D31.fri.map(r=>`<tr class="wrap"><td style="width:150px"><b>${r[0]}</b></td><td class="n mono">${r[1]}</td>
+    <td class="n mono ${r[3]>0?'pos':'neg'}">${r[2]}</td><td class="tx2">${r[4]}</td></tr>`).join("")}
+   </tbody></table></div></div>
+   <div><div class="desk">MONDAY 31 AUGUST · EARLY</div>
+   <div class="tw"><table><tbody>
+   ${D31.mon.map(r=>`<tr class="wrap"><td style="width:150px"><b>${r[0]}</b></td><td class="n mono">${r[1]}</td>
+    <td class="n mono ${r[3]>0?'pos':'neg'}">${r[2]}</td><td class="tx2">${r[4]}</td></tr>`).join("")}
+   </tbody></table></div></div>
+  </div>
+ </div>
+
+ <div class="sh"><b>FIVE THINGS</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${D31F.map(x=>`<div class="card" style="border-color:${x.c=='neg'?'#e0c5c5':x.c=='pos'?'#c9e2d5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl" style="font-size:13px">${x.t}</div>
+   <span class="tag st ${x.c}">${x.pri==1?'BIGGEST':x.pri==2?'SETTLED':'#'+x.pri}</span></div>
+  <div class="blk">${x.b}${SB('ct')}</div>
+  <div class="blk ${x.c=='neg'?'n':x.c=='pos'?'p':'g'}"><div class="h">What it means for you</div>${x.w}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>YOUR FOUR POSITIONS INTO THE OPEN</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th>Ticker</th><th class="n">Weight</th><th>Direction</th><th style="min-width:520px">Reading</th></tr></thead><tbody>
+ ${D31POS.map(p=>`<tr class="wrap"><td><b>${p.tk}</b></td><td class="n mono">${p.w}</td>
+  <td><span class="tag st ${p.c}">${p.c=='neg'?'HEADWIND':p.c=='gold'?'MIXED':'NEUTRAL'}</span></td><td>${p.r}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="sh"><b>THE WEEK AHEAD</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="width:120px">Day</th><th style="min-width:400px">What</th><th style="min-width:380px">Why it matters now</th></tr></thead><tbody>
+ ${D31WEEK.map(w=>`<tr class="wrap"><td class="mono gold"><b>${w[0]}</b></td><td>${w[1]}</td><td class="tx2">${w[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">Where this leaves you</div>
+ Three things moved against you over the weekend: the Strait escalated after normalising, a September hike went from a third to more likely than not, and the clearest test of the bar argument came back negative — <b>NVIDIA beat and fell 4.45% anyway.</b><br><br>
+ One thing moved for you: August closed as a winning month across all three indices, and you still hold <b>€8,297.86 in cash</b> untouched through the entire run.<br><br>
+ <b>The single action this week:</b> get the precise September hike probability before Friday's jobs report. Your written trigger is 65%. "More likely than not" is not a number, and the difference between 55% and 70% is the difference between watching and reducing.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["MARKET","31 Aug · Larak strike · oil +2%","fresh"],
+  ["HIKE ODDS","more likely than not · trigger 65%","stale"],
+  ["FRIDAY","4 Sep · August payrolls","stale"],
+  ["VERSION","39.0 · 31 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v39 · 31 AUGUST";
+},5700);
+
+
+
+/* ═══════════ v40 — MONDAY 31 AUGUST, MIDDAY · YOUR FEED ═══════════ */
+
+const M31 = {
+ h:"Iran promised a decisive response, European inflation ticked up, and the dollar gave back Friday's gain",
+ lead:`Your feed caught three things that matter and a dozen that do not. Below: what moves your positions, what is diplomatic noise, and one item that partly reverses the correction I gave you on Saturday.`
+};
+
+const M31KEY = [
+{t:"Iran promised a \"decisive response\" — and seized a ship",c:"neg",pri:1,
+ b:`Deputy Foreign Minister Kazem Gharibabadi said the US strike on Larak Island <b>\"will draw a decisive response\"</b> and that <b>\"these aggressive actions will receive an appropriate response.\"</b><br><br>
+ Separately, Iranian authorities <b>detained a bulk carrier</b> on Monday near Bandar Abbas, officially over discharging oily waste into the Gulf. And an IRGC cleric was reported killed near Iran's southeastern border.`,
+ w:`The ship seizure is the part to watch, not the rhetoric. <b>A pollution charge is a legal pretext with a maritime effect</b> — it does not require an attack to disrupt traffic, and it is far cheaper to repeat.<br><br>
+ Your tripwire is unchanged and now more relevant than ever: <b>ship counts beat statements.</b> Flows went from 4 to 7–8 million barrels a day by routing around the chokepoint. Detentions attack exactly that workaround.`},
+{t:"German regional inflation rose — and this leads the national number",c:"neg",pri:2,
+ b:`<b>Bavaria's August inflation came in at 2.9% year on year, up from 2.8%.</b> German regional readings are published before the national figure and are used to estimate it.`,
+ w:`This matters more than its size. Until now the inflation problem was framed as American. <b>A rising European print means the pressure is not confined to one central bank</b> — and the euro area has no equivalent of the US fiscal story to blame it on.<br><br>
+ It also lands on the same morning that one commentary argued the euro area, not the US, may create the next debt crisis. Two independent signals pointing at European rates on one day.<br><br>
+ For you: you hold no euro assets, so this is not direct. But higher European rates pull global long yields with them, and that is the lever on 72.6% of your shares.`},
+{t:"The dollar gave back Friday's gain",c:"gold",pri:3,
+ b:`<b>USD/JPY extended losses, dropping 0.3% to 159.65</b>, its low for the day — after posting its biggest gain in about a month on Friday's hawkish speech.`,
+ w:`<b>This partly walks back the correction I gave you on Saturday.</b> I said the repatriation story had not started because the dollar strengthened. Two sessions later it is giving that back.<br><br>
+ The honest reading: <b>neither story is winning cleanly.</b> The rate differential pulled the dollar up on Friday; something pulled it back down on Monday. One day does not establish a trend in either direction.<br><br>
+ What it does confirm is the mechanism I described: this is a genuine two-way fight between the rate gap and the repatriation pull, not a settled direction. Every 1% is about €115 to you.`},
+{t:"SK Hynix will outsource its next-generation memory base die to Intel",c:"gold",pri:4,
+ b:`Reported by the Korea Herald. High-bandwidth memory is the component AI accelerators depend on, and the base die is the layer underneath the memory stack.`,
+ w:`A structural shift in who manufactures what inside the AI supply chain. Not a price event for you — but it is the same category as NVIDIA halting revenue-sharing: <b>the economics of the AI build-out being redistributed among suppliers.</b><br><br>
+ Relevant because 99.9% of your shares sit in that cluster without owning a chip company. When the suppliers reorganise among themselves, sentiment moves and your positions move with it.`},
+{t:"Trump: \"doesn't want Canadian anything\"",c:"neg",pri:5,
+ b:`He labelled Canada one of the <b>\"worst abusers\"</b> and declared he does not want \"Canadian anything.\" This follows the 50% vehicle and alcohol tariff of 19 August and Canada's $27.6bn retaliation.`,
+ w:`Your policy register predicted the shape of this exchange and it is still escalating. No direct exposure — but note the pattern: <b>a measure with a date produced a counter-measure, which produced rhetoric, which will likely produce another measure.</b><br><br>
+ The relevant question for your register is whether this reaches a sector you do hold. So far it has not.`}
+];
+
+const M31EUR = [
+ ["Germany · DAX","−0.45%","<b>The weakest of the European majors</b>, on the same day Bavarian inflation rose. Composition helped it for weeks; it is not helping today."],
+ ["France · CAC 40","+0.2%","—"],
+ ["Spain · IBEX","+0.17%","Spain's current account also improved to €2.41bn in June from €1.8bn."],
+ ["Europe · Stoxx 600","−0.05%","Essentially flat. The DAX is the outlier, not the region."]
+];
+
+const M31NOISE = [
+ ["UAE denies an airbase attack","The Defence Ministry called media reports of a missile attack on Al Minhad Air Base <b>false</b>.","<b>Worth noting that the rumour existed at all.</b> An attack on a Gulf state's airbase would be a major escalation. Denied — but the market traded the rumour before the denial."],
+ ["UAE calls for de-escalation","Presidential adviser Gargash said the policy of targeting Gulf states and Jordan <b>has failed</b>, that political solutions must begin with <b>restoring normal shipping through the Strait</b>, and that the memorandum of understanding failed to produce a practical roadmap. The UAE also called 'no war, no peace' an unsustainable solution.","The diplomatic counterweight to the escalation. A Gulf state publicly pushing for normal shipping is the constituency that benefits most from reopening."],
+ ["Modi meets Iran's president","At 2pm IST in Bishkek.","India is a major buyer of Iranian-adjacent crude flows. Watch what comes out of it."],
+ ["Mercedes-Benz buyback up to €1bn","—","European corporate confidence signal. Not yours."],
+ ["Honda and Nissan on vehicle software","Joining forces to boost scale.","<b>Marginally relevant to Xiaomi</b> — Japanese incumbents consolidating against Chinese EV software competition."],
+ ["Shein shares fall 11% in the Hong Kong grey market","—","A Hong Kong listing sentiment read, on the same morning the Hang Seng fell 0.71%."],
+ ["Google retreats on a European enforcement action","To head off an antitrust fine.","Not yours. Included so you can see what was screened out."],
+ ["Japan FY27 budget requests around 143 trillion yen","—","Feeds the Japanese fiscal picture behind the weak bond auction."],
+ ["China–Nepal cooperation statements · Kazakhstan appointment · Ceuta economic plan","—","No transmission to any position you hold."]
+];
+
+/* ── render ── */
+setTimeout(()=>{
+ const s=$("#c-start"); if(!s)return;
+ s.insertAdjacentHTML("afterbegin",`
+ <div class="sh"><b>MONDAY 31 AUGUST · MIDDAY</b> · YOUR FEED, FILTERED</div>
+ <div class="card hl" style="margin-bottom:14px">
+  <div class="ct"><div class="ctl" style="font-size:15px">${M31.h}</div>
+   <span class="tag st gold">FROM YOUR NOTIFICATIONS</span></div>
+  <div class="lede">${M31.lead}</div>
+ </div>
+
+ <div class="sh"><b>FIVE THAT MATTER</b></div>
+ <div class="grid g2" style="margin-bottom:14px">
+ ${M31KEY.map(x=>`<div class="card" style="border-color:${x.c=='neg'?'#e0c5c5':'#e6dcc0'}">
+  <div class="ct"><div class="ctl" style="font-size:13px">${x.t}</div>
+   <span class="tag st ${x.c}">#${x.pri}</span></div>
+  <div class="blk">${x.b}${SB('ct')}</div>
+  <div class="blk ${x.c=='neg'?'n':'g'}"><div class="h">What it means for you</div>${x.w}</div></div>`).join("")}
+ </div>
+
+ <div class="sh"><b>EUROPE THIS MORNING</b></div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="width:180px">Index</th><th class="n">Move</th><th style="min-width:520px">Note</th></tr></thead><tbody>
+ ${M31EUR.map(e=>`<tr class="wrap"><td><b>${e[0]}</b></td>
+  <td class="n mono ${e[1].startsWith('+')?'pos':'neg'}">${e[1]}</td><td>${e[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div class="note">The DAX being weakest while the CAC and IBEX are green is worth a second look. For weeks the German index outperformed <b>because</b> of its composition — no chips, heavy energy and banks. A rising German inflation print is one plausible explanation for today's divergence, but a single session is not evidence.</div>
+
+ <div class="sh"><b>WHAT WAS SCREENED OUT, AND WHY</b></div>
+ <div class="lede">Included so you can see the filter working. Most of a feed is noise, and knowing <i>why</i> something is noise is more useful than not seeing it.</div>
+ <div class="tw" style="margin-bottom:14px"><table><thead><tr><th style="min-width:230px">Item</th><th style="min-width:400px">What it says</th><th style="min-width:340px">Why it is or is not relevant</th></tr></thead><tbody>
+ ${M31NOISE.map(n=>`<tr class="wrap"><td><b>${n[0]}</b></td><td class="tx2">${n[1]}</td><td>${n[2]}</td></tr>`).join("")}
+ </tbody></table></div>
+
+ <div class="warn goldbox"><div class="h">The pattern across all of it</div>
+ The Middle East items split cleanly in two. <b>Iran is escalating</b> — a promised decisive response, a ship seized on a pollution pretext, a commander killed. <b>The Gulf states are pushing the other way</b> — the UAE denying an attack report, calling the targeting policy a failure, and explicitly naming <i>restoring normal shipping through the Strait</i> as the starting point for any solution.<br><br>
+ That is a genuine split between the parties, and it is the first time the diplomatic pressure has come from inside the region rather than from Washington.<br><br>
+ <b>For your positions nothing has changed since this morning.</b> The one thing to keep watching is the transit count — because a seizure on a legal pretext disrupts the workarounds without needing a single missile.</div>
+ <div style="height:20px"></div>`);
+
+ $("#stamps").innerHTML=[["FEED","31 Aug 10:44 · filtered","fresh"],
+  ["NEW","German inflation up · Iran seizes ship","fresh"],
+  ["FRIDAY","4 Sep · August payrolls","stale"],
+  ["VERSION","40.0 · 31 Aug 2026",""]]
+  .map(x=>`<span class="hbadge ${x[2]}">${x[0]} <b>${x[1]}</b></span>`).join("");
+ document.querySelector(".logo span").textContent="CONTROL ROOM · v40 · 31 AUGUST MIDDAY";
+},5900);
+
 </script>
 </body>
 </html>
